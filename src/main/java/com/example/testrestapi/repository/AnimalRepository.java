@@ -4,11 +4,13 @@ import com.example.testrestapi.entity.Animal;
 import com.example.testrestapi.entity.AnimalType;
 import com.example.testrestapi.entity.Farm;
 import com.example.testrestapi.inf.IAnimalRepository;
+import org.springframework.stereotype.Repository;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
+@Repository
 public class AnimalRepository implements IAnimalRepository {
     public List<Animal> animals = new ArrayList<>();
 
@@ -30,7 +32,7 @@ public class AnimalRepository implements IAnimalRepository {
     }
 
     @Override
-    public List<Animal> getByDate(Date date) {
-        return null;
+    public List<Animal> getByDate(String date) {
+        return animals.stream().filter(animal -> animal.getRegistrationDate().equals(date)).collect(Collectors.toList());
     }
 }
