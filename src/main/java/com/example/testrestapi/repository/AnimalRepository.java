@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Repository
@@ -32,7 +33,11 @@ public class AnimalRepository implements IAnimalRepository {
     }
 
     @Override
-    public List<Animal> getByDate(String date) {
-        return animals.stream().filter(animal -> animal.getRegistrationDate().equals(date)).collect(Collectors.toList());
+    public List<Animal> getAnimals(String date, Long farmId) {
+        return animals.stream().filter(animal -> {
+            boolean isDate = date != null ? animal.getRegistrationDate().equals(date) : true;
+            boolean isFarm = farmId != null ? animal.getFarm().getId() == farmId : true;
+            return isDate && isFarm;
+        }).collect(Collectors.toList());
     }
 }
