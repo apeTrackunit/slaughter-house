@@ -8,9 +8,9 @@ public class Animal {
     private boolean isOk;
     private Farm farm;
     private AnimalType type;
-    private Date registrationDate;
+    private String registrationDate;
 
-    public Animal(long id, long weight, boolean isOk, Farm farm, AnimalType type, Date registrationDate) {
+    public Animal(long id, long weight, boolean isOk, Farm farm, AnimalType type, String registrationDate) {
         this.id = id;
         this.weight = weight;
         this.isOk = isOk;
@@ -59,11 +59,11 @@ public class Animal {
         this.type = type;
     }
 
-    public Date getRegistrationDate() {
+    public String getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(Date registrationDate) {
+    public void setRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
     }
 }
