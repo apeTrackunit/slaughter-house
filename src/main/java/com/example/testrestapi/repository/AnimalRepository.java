@@ -33,6 +33,11 @@ public class AnimalRepository implements IAnimalRepository {
     }
 
     @Override
+    public Animal getAnimalById(long id) {
+        return animals.stream().filter(animal -> animal.getId()==id).findFirst().get();
+    }
+
+    @Override
     public List<Animal> getAnimals(String date, Long farmId) {
         return animals.stream().filter(animal -> {
             boolean isDate = date != null ? animal.getRegistrationDate().equals(date) : true;
