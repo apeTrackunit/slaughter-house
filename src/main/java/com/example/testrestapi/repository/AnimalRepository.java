@@ -32,6 +32,11 @@ public class AnimalRepository implements IAnimalRepository {
     }
 
     @Override
+    public Animal getAnimalById(long id) {
+        return animals.stream().filter(animal -> animal.getId()==id).findFirst().get();
+    }
+
+    @Override
     public List<Animal> getByDate(String date) {
         return animals.stream().filter(animal -> animal.getRegistrationDate().equals(date)).collect(Collectors.toList());
     }

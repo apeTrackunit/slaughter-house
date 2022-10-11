@@ -16,9 +16,15 @@ public class AnimalController {
         this.anRepo = repo;
     }
 
-    @RequestMapping(value = "/animal/{registrationDate}", method = RequestMethod.GET)
+    @RequestMapping(value = "/animals/{registrationDate}", method = RequestMethod.GET)
     @ResponseBody
     public List<Animal> getAnimalsByDate(@PathVariable String registrationDate){
         return anRepo.getByDate(registrationDate);
+    }
+
+    @RequestMapping(value = "/animal/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Animal getAnimalById(@PathVariable long id) {
+        return anRepo.getAnimalById(id);
     }
 }

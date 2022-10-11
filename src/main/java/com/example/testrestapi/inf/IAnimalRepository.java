@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IAnimalRepository {
     List<Animal> getByDate(String date);
+    Animal getAnimalById(long id);
+
 }
