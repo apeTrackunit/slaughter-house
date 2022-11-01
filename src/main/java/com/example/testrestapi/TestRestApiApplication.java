@@ -1,6 +1,7 @@
 package com.example.testrestapi;
 
 import com.example.testrestapi.service.AnimalImpl;
+import com.example.testrestapi.service.ProductImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +17,7 @@ public class TestRestApiApplication {
 
         Server server = ServerBuilder
                 .forPort(8080)
-                .addService(new AnimalImpl()).build();
+                .addService(new ProductImpl()).build();
 
         server.start();
         server.awaitTermination();
