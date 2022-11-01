@@ -7,7 +7,7 @@ message GetAnimalIdsRequest {
 }
 
 message GetAnimalIdsResponse {
-  repeated int64 animalIds = 1;
+  repeated int64 animalIds = 1 [packed=true];
 }
 
 message GetProductIdsRequest {
@@ -15,11 +15,14 @@ message GetProductIdsRequest {
 }
 
 message GetProductIdsResponse {
-  repeated int64 productIds = 1;
+  repeated int64 productIds = 1 [packed=true];
 }
 
-service HelloService {
+service AnimalsService {
   rpc getAnimalIds(GetAnimalIdsRequest) returns (GetAnimalIdsResponse);
+}
+
+service ProductsService {
   rpc getProductIds(GetProductIdsRequest) returns (GetProductIdsResponse);
 }
 
