@@ -1,5 +1,7 @@
 package com.example.testrestapi.entity;
 
+import org.json.simple.JSONObject;
+
 import java.sql.Date;
 
 public class Animal {
@@ -66,4 +68,17 @@ public class Animal {
     public void setRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
     }
+
+    /*public static Animal getAnimalObj(JSONObject jsonObject){
+        JSONObject jsonFarm = (JSONObject)jsonObject.get("farm");
+        JSONObject jsonAnimalType = (JSONObject)jsonObject.get("animalType");
+
+        return new Animal(
+                Long.valueOf(jsonObject.get("id").toString()),
+                Long.valueOf(jsonObject.get("weight").toString()),
+                (Boolean) jsonObject.get("isOk"),
+                Farm.getFarmObj(jsonFarm),
+                AnimalType.getAnimalTypeObj(jsonAnimalType),
+                (String) jsonObject.get("registrationDate"));
+    }*/
 }

@@ -1,5 +1,7 @@
 package com.example.testrestapi.entity;
 
+import org.json.simple.JSONObject;
+
 public class Farm {
     private long id;
     private String name;
@@ -44,4 +46,12 @@ public class Farm {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    /*public static Farm getFarmObj(JSONObject jsonObject){
+        return new Farm(
+                Long.valueOf(jsonObject.get("id").toString()),
+                (String) jsonObject.get("name"),
+                (String) jsonObject.get("location"),
+                (String) jsonObject.get("description"));
+    }*/
 }

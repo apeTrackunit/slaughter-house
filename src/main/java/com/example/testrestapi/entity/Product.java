@@ -2,15 +2,19 @@ package com.example.testrestapi.entity;
 
 import org.json.simple.JSONObject;
 
-public class AnimalType {
+import java.util.List;
+
+public class Product {
     private long id;
     private String name;
     private String description;
+    private List<AnimalPart> animalParts;
 
-    public AnimalType(long id, String name, String description) {
+    public Product(long id, String name, String description, List<AnimalPart> animalParts) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.animalParts = animalParts;
     }
 
     public long getId() {
@@ -37,10 +41,11 @@ public class AnimalType {
         this.description = description;
     }
 
-    /*public static AnimalType getAnimalTypeObj(JSONObject jsonObject){
-        return new AnimalType(
-                Long.valueOf(jsonObject.get("id").toString()),
-                (String) jsonObject.get("name"),
-                (String) jsonObject.get("description"));
-    }*/
+    public List<AnimalPart> getAnimalParts() {
+        return animalParts;
+    }
+
+    public void setAnimalParts(List<AnimalPart> animalParts) {
+        this.animalParts = animalParts;
+    }
 }
