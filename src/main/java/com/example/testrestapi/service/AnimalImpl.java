@@ -14,10 +14,18 @@ public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
 
     @Override
     public void getAnimalIds(GetAnimalIdsRequest request, StreamObserver<GetAnimalIdsResponse> responseObserver){
+        List<Long> ids = new ArrayList<>();
+        ids.add(1L);
+        ids.add(2L);
+        ids.add(3L);
 
-        List<Long> ids = new ArrayList<Long>();
+        GetAnimalIdsResponse.Builder builder = GetAnimalIdsResponse.newBuilder();
 
-        GetAnimalIdsResponse responseText = GetAnimalIdsResponse.newBuilder().setAnimalIds().build();
+        for (int i = 0; i < ids.size(); i++) {
+            builder.addAnimalIds(ids.get(i));
+        }
+
+        GetAnimalIdsResponse responseText = builder.build();
         responseObserver.onNext(responseText);
         responseObserver.onCompleted();
     }
