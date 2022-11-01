@@ -1,0 +1,25 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.testrestapi;
+
+message GetAnimalIdsRequest {
+  int64 productId = 1;
+}
+
+message GetAnimalIdsResponse {
+  repeated int64 animalIds = 1;
+}
+
+message GetProductIdsRequest {
+  int64 animalId = 1;
+}
+
+message GetProductIdsResponse {
+  repeated int64 productIds = 1;
+}
+
+service HelloService {
+  rpc getAnimalIds(GetAnimalIdsRequest) returns (GetAnimalIdsResponse);
+  rpc getProductIds(GetProductIdsRequest) returns (GetProductIdsResponse);
+}
+
