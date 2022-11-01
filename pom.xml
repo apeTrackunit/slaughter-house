@@ -89,6 +89,7 @@
                                 <include>src/main/proto</include>
                             </inputDirectories>
 
+
                             <outputTargets>
                                 <outputTarget>
                                     <type>java</type>
