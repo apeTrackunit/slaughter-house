@@ -1,8 +1,10 @@
 package com.example.testrestapi;
 
+import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.dbConnection.DBProduct;
 
 import com.example.testrestapi.dbConnection.DBProduct;
+import com.example.testrestapi.entity.Animal;
 import com.example.testrestapi.entity.Product;
 import com.example.testrestapi.service.AnimalImpl;
 import com.example.testrestapi.service.ProductImpl;
@@ -36,14 +38,13 @@ public class TestRestApiApplication {
         System.out.println("Name: " + product.getName());
         System.out.println("Description " + product.getDescription());
 */
-        ArrayList<Product> products = DBProduct.getProductsByAnimalId(2);
-        Product product;
+        ArrayList<Animal> animals = DBAnimal.getAnimalsByProductId(2);
+        Animal animal;
 
-        for(int i = 0; i < products.size(); i++){
-            product = products.get(i);
-            System.out.println("Id: " + product.getId());
-            System.out.println("Name: " + product.getName());
-            System.out.println("Description " + product.getDescription());
+        for(int i = 0; i < animals.size(); i++){
+            animal = animals.get(i);
+            System.out.println("Id: " + animal.getId());
+            System.out.println("Weight: " + animal.getWeight());
         }
     }
 
