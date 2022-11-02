@@ -6,11 +6,13 @@ import com.example.testrestapi.GetAnimalIdsResponse;
 import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.entity.Animal;
 import io.grpc.stub.StreamObserver;
+import org.lognet.springboot.grpc.GRpcService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
+
 
     @Override
     public void getAnimalIds(GetAnimalIdsRequest request, StreamObserver<GetAnimalIdsResponse> responseObserver) {
@@ -20,9 +22,7 @@ public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
             List<Animal> animals = DBAnimal.getAnimalsByProductId(request.getProductId());
 
             GetAnimalIdsResponse.Builder builder = GetAnimalIdsResponse.newBuilder();
-            for (int i = 0; i < animals.size(); i++) {
-                builder.addAnimalIds(animals.get(i).getId());
-            }
+            builder.addAllAnimalIds(animals.stream().map(x -> x.getId()).toList());
 
             GetAnimalIdsResponse responseText = builder.build();
             responseObserver.onNext(responseText);

@@ -25,7 +25,8 @@ public class TestRestApiApplication {
 
         Server server = ServerBuilder
                 .forPort(8080)
-                .addService(new ProductImpl()).build();
+                .addService(new ProductImpl()).
+                addService(new AnimalImpl()).build();
 
         server.start();
         server.awaitTermination();
