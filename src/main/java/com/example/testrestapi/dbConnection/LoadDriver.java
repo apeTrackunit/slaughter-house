@@ -11,7 +11,7 @@ import java.sql.*;
 
 
 public class LoadDriver {
-    public static void main(String arg[])
+    public static Connection getDBConnection()
     {
         Connection connection = null;
         try {
@@ -20,31 +20,16 @@ public class LoadDriver {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/slaughterhouse",
                     "root", "HesloJeNajlepsieHeslo");
+            System.out.println("Driver loaded ok");
 
             // slaughterhouse is database
             // root is user name
             // HesloJeNajlepsieHeslo is database password
-
-            Statement statement;
-            statement = connection.createStatement();
-            ResultSet resultSet;
-            resultSet = statement.executeQuery(
-                    "select * from product");
-            String Name;
-            String Description;
-            while (resultSet.next()) {
-                Name = resultSet.getString("Name");
-                Description = resultSet.getString("Description").trim();
-                System.out.println("Name : " + Name
-                        + " Description : " + Description);
-            }
-            resultSet.close();
-            statement.close();
-            connection.close();
         }
         catch (Exception exception) {
             System.out.println(exception);
         }
+        return connection;
     } // function ends
 } // class ends
 
