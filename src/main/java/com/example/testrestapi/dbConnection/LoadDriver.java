@@ -16,7 +16,7 @@ public class LoadDriver {
         Connection connection = null;
         try {
             // below two lines are used for connectivity.
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/slaughterhouse",
                     "root", "HesloJeNajlepsieHeslo");
