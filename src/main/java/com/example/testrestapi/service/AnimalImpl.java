@@ -7,12 +7,14 @@ import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.entity.Animal;
 import io.grpc.stub.StreamObserver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
 
     @Override
     public void getAnimalIds(GetAnimalIdsRequest request, StreamObserver<GetAnimalIdsResponse> responseObserver) {
+
         try{
 
             List<Animal> animals = DBAnimal.getAnimalsByProductId(request.getProductId());

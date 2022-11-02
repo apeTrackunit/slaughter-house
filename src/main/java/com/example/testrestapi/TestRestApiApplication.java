@@ -21,31 +21,13 @@ import java.util.ArrayList;
 public class TestRestApiApplication {
 
     public static void main(String[] args) throws IOException, InterruptedException, SQLException {
-        /* SpringApplication.run(TestRestApiApplication.class, args);
+        SpringApplication.run(TestRestApiApplication.class, args);
 
         Server server = ServerBuilder
                 .forPort(8080)
                 .addService(new ProductImpl()).build();
 
         server.start();
-        server.awaitTermination();*/
-/*
-        Product product = DBProduct.getProductById(1);
-        System.out.println("Name: " + product.getName());
-        System.out.println("Description " + product.getDescription());
-
-        product = DBProduct.getProductById(2);
-        System.out.println("Name: " + product.getName());
-        System.out.println("Description " + product.getDescription());
-*/
-        ArrayList<Animal> animals = DBAnimal.getAnimalsByProductId(2);
-        Animal animal;
-
-        for(int i = 0; i < animals.size(); i++){
-            animal = animals.get(i);
-            System.out.println("Id: " + animal.getId());
-            System.out.println("Weight: " + animal.getWeight());
+        server.awaitTermination();
         }
     }
-
-}
