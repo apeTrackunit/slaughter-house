@@ -51,16 +51,12 @@ public class DBProduct {
                             "    where AnimalId = " +
                             id + ");");
 
-            long Id;
-            String Name;
-            String Description;
             ArrayList<Product> products = new ArrayList<>();
 
-
             while (resultSet.next()) {
-                Id = resultSet.getLong("Id");
-                Name = resultSet.getString("Name");
-                Description = resultSet.getString("Description").trim();
+                long Id = resultSet.getLong("Id");
+                String Name = resultSet.getString("Name");
+                String Description = resultSet.getString("Description").trim();
                 products.add(new Product(Id, Name, Description, null));
 
             }
