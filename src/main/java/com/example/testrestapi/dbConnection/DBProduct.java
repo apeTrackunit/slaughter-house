@@ -4,13 +4,11 @@ import com.example.testrestapi.entity.Product;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class DBProduct {
 
     public static Product getProductById(long id) throws SQLException {
-        Connection connection = LoadDriver.getDBConnection();
-        try{
+        try (Connection connection = LoadDriver.getDBConnection()) {
 
             Statement statement;
             statement = connection.createStatement();
@@ -21,9 +19,9 @@ public class DBProduct {
             long Id = 0;
             String Name = null;
             String Description = null;
+            Product product;
 
-
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Id = resultSet.getLong("Id");
                 Name = resultSet.getString("Name");
                 Description = resultSet.getString("Description").trim();
@@ -31,22 +29,16 @@ public class DBProduct {
             resultSet.close();
             statement.close();
             connection.close();
-            Product product = new Product(Id, Name, Description, null);
+            product = new Product(Id, Name, Description, null);
             return product;
 
-        }catch(Exception e){
-            throw e;
-        }
-        finally{
-            connection.close();
         }
 
     }
 
     public static ArrayList<Product> getProductsByAnimalId(long id) throws SQLException {
-        Connection connection = LoadDriver.getDBConnection();
 
-        try{
+        try (Connection connection = LoadDriver.getDBConnection()) {
 
             Statement statement;
             statement = connection.createStatement();
@@ -59,13 +51,13 @@ public class DBProduct {
                             "    where AnimalId = " +
                             id + ");");
 
-            long Id = 0;
-            String Name = null;
-            String Description = null;
+            long Id;
+            String Name;
+            String Description;
             ArrayList<Product> products = new ArrayList<>();
 
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Id = resultSet.getLong("Id");
                 Name = resultSet.getString("Name");
                 Description = resultSet.getString("Description").trim();
@@ -76,12 +68,6 @@ public class DBProduct {
             statement.close();
             connection.close();
             return products;
-
-        }catch(Exception e){
-            throw e;
-        }
-        finally{
-            connection.close();
         }
     }
 }
