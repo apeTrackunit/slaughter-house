@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Tray {
    private long id;
-   private double max_weight;
+   private double maxWeight;
    private String description;
    private ArrayList<AnimalPart> animalParts;
 
     public Tray(long id, double max_weight, String description) {
         this.id = id;
-        this.max_weight = max_weight;
+        this.maxWeight = max_weight;
         this.description = description;
     }
 
@@ -23,11 +23,11 @@ public class Tray {
     }
 
     public double getMax_weight() {
-        return max_weight;
+        return maxWeight;
     }
 
     public void setMax_weight(double max_weight) {
-        this.max_weight = max_weight;
+        this.maxWeight = max_weight;
     }
 
     public String getDescription() {

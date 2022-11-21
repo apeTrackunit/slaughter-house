@@ -45,6 +45,68 @@ public final class ProductsServiceGrpc {
     return getGetProductIdsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.GetProductRequest,
+      com.example.testrestapi.GetProductResponse> getGetProductServiceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getProductService",
+      requestType = com.example.testrestapi.GetProductRequest.class,
+      responseType = com.example.testrestapi.GetProductResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.testrestapi.GetProductRequest,
+      com.example.testrestapi.GetProductResponse> getGetProductServiceMethod() {
+    io.grpc.MethodDescriptor<com.example.testrestapi.GetProductRequest, com.example.testrestapi.GetProductResponse> getGetProductServiceMethod;
+    if ((getGetProductServiceMethod = ProductsServiceGrpc.getGetProductServiceMethod) == null) {
+      synchronized (ProductsServiceGrpc.class) {
+        if ((getGetProductServiceMethod = ProductsServiceGrpc.getGetProductServiceMethod) == null) {
+          ProductsServiceGrpc.getGetProductServiceMethod = getGetProductServiceMethod =
+              io.grpc.MethodDescriptor.<com.example.testrestapi.GetProductRequest, com.example.testrestapi.GetProductResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProductService"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.GetProductRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.GetProductResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductsServiceMethodDescriptorSupplier("getProductService"))
+              .build();
+        }
+      }
+    }
+    return getGetProductServiceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.CreateProductRequest,
+      com.example.testrestapi.CreateProductResponse> getCreateProductServiceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createProductService",
+      requestType = com.example.testrestapi.CreateProductRequest.class,
+      responseType = com.example.testrestapi.CreateProductResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.testrestapi.CreateProductRequest,
+      com.example.testrestapi.CreateProductResponse> getCreateProductServiceMethod() {
+    io.grpc.MethodDescriptor<com.example.testrestapi.CreateProductRequest, com.example.testrestapi.CreateProductResponse> getCreateProductServiceMethod;
+    if ((getCreateProductServiceMethod = ProductsServiceGrpc.getCreateProductServiceMethod) == null) {
+      synchronized (ProductsServiceGrpc.class) {
+        if ((getCreateProductServiceMethod = ProductsServiceGrpc.getCreateProductServiceMethod) == null) {
+          ProductsServiceGrpc.getCreateProductServiceMethod = getCreateProductServiceMethod =
+              io.grpc.MethodDescriptor.<com.example.testrestapi.CreateProductRequest, com.example.testrestapi.CreateProductResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createProductService"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.CreateProductRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.CreateProductResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductsServiceMethodDescriptorSupplier("createProductService"))
+              .build();
+        }
+      }
+    }
+    return getCreateProductServiceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +162,20 @@ public final class ProductsServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductIdsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getProductService(com.example.testrestapi.GetProductRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.GetProductResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductServiceMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void createProductService(com.example.testrestapi.CreateProductRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.CreateProductResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProductServiceMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -109,6 +185,20 @@ public final class ProductsServiceGrpc {
                 com.example.testrestapi.GetProductIdsRequest,
                 com.example.testrestapi.GetProductIdsResponse>(
                   this, METHODID_GET_PRODUCT_IDS)))
+          .addMethod(
+            getGetProductServiceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.example.testrestapi.GetProductRequest,
+                com.example.testrestapi.GetProductResponse>(
+                  this, METHODID_GET_PRODUCT_SERVICE)))
+          .addMethod(
+            getCreateProductServiceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.example.testrestapi.CreateProductRequest,
+                com.example.testrestapi.CreateProductResponse>(
+                  this, METHODID_CREATE_PRODUCT_SERVICE)))
           .build();
     }
   }
@@ -134,6 +224,22 @@ public final class ProductsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProductIdsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getProductService(com.example.testrestapi.GetProductRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.GetProductResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetProductServiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createProductService(com.example.testrestapi.CreateProductRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.CreateProductResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateProductServiceMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +261,20 @@ public final class ProductsServiceGrpc {
     public com.example.testrestapi.GetProductIdsResponse getProductIds(com.example.testrestapi.GetProductIdsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductIdsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.testrestapi.GetProductResponse getProductService(com.example.testrestapi.GetProductRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetProductServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.testrestapi.CreateProductResponse createProductService(com.example.testrestapi.CreateProductRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateProductServiceMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,9 +299,27 @@ public final class ProductsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProductIdsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.testrestapi.GetProductResponse> getProductService(
+        com.example.testrestapi.GetProductRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetProductServiceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.testrestapi.CreateProductResponse> createProductService(
+        com.example.testrestapi.CreateProductRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateProductServiceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_PRODUCT_IDS = 0;
+  private static final int METHODID_GET_PRODUCT_SERVICE = 1;
+  private static final int METHODID_CREATE_PRODUCT_SERVICE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -203,6 +341,14 @@ public final class ProductsServiceGrpc {
         case METHODID_GET_PRODUCT_IDS:
           serviceImpl.getProductIds((com.example.testrestapi.GetProductIdsRequest) request,
               (io.grpc.stub.StreamObserver<com.example.testrestapi.GetProductIdsResponse>) responseObserver);
+          break;
+        case METHODID_GET_PRODUCT_SERVICE:
+          serviceImpl.getProductService((com.example.testrestapi.GetProductRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.testrestapi.GetProductResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PRODUCT_SERVICE:
+          serviceImpl.createProductService((com.example.testrestapi.CreateProductRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.testrestapi.CreateProductResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -266,6 +412,8 @@ public final class ProductsServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductsServiceFileDescriptorSupplier())
               .addMethod(getGetProductIdsMethod())
+              .addMethod(getGetProductServiceMethod())
+              .addMethod(getCreateProductServiceMethod())
               .build();
         }
       }

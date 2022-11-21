@@ -10,6 +10,95 @@ message GetAnimalIdsResponse {
   repeated int64 animalIds = 1 [packed=true];
 }
 
+message GetAnimalRequest{
+  int64 animalId = 1;
+}
+
+message GetAnimalResponse{
+  int64 animalId = 1;
+  int64 weight = 2;
+  bool isOk = 3;
+  int64 farmId = 4;
+  int64 animalTypeId = 5;
+  string registrationDate = 6;
+}
+
+message CreateAnimalRequest{
+  int64 weight = 1;
+  bool isOk = 2;
+  int64 farmId = 3;
+  int64 animalTypeId = 4;
+  string registrationDate = 5;
+}
+
+message CreateAnimalResponse{
+  string confirmation = 1;
+  int64 id = 2;
+}
+
+message GetAnimalPartRequest{
+  int64 id = 1;
+}
+
+message GetAnimalPartResponse{
+  int64 id =  1;
+  double weight = 2;
+  int64 animalId = 3;
+}
+
+message CreateAnimalPartRequest{
+  double weight = 1;
+  int64 animalId = 2;
+}
+
+message CreateAnimalPartResponse{
+  string confirmation = 1;
+  int64 id = 2;
+}
+
+message GetAnimalTypeRequest{
+  int64 id = 1;
+}
+
+message GetAnimalTypeResponse{
+  int64 id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message CreateAnimalTypeRequest{
+  string name = 1;
+  string description = 2;
+}
+
+message CreateAnimalTypeResponse{
+  string confirmation = 1;
+  int64 id = 2;
+}
+
+message GetFarmRequest{
+  int64 id=1;
+}
+
+message GetFarmResponse{
+  int64 id=1;
+  string name=2;
+  string location=3;
+  string description=4;
+}
+
+message CreateFarmRequest{
+  string name=2;
+  string location=3;
+  string description=4;
+}
+
+message CreateFarmResponse{
+  string confirmation=1;
+  int64 id=2;
+}
+
+
 message GetProductIdsRequest {
   int64 animalId = 1;
 }
@@ -18,11 +107,137 @@ message GetProductIdsResponse {
   repeated int64 productIds = 1 [packed=true];
 }
 
+message GetProductRequest{
+  int64 id=1;
+}
+
+message GetProductResponse{
+  string name=1;
+  string description=2;
+  repeated int64 animalParts=3;
+}
+
+message CreateProductRequest{
+  string name=1;
+  string description=2;
+  repeated int64 animalParts=3;
+}
+
+message CreateProductResponse{
+  string confirmation=1;
+  int64 id=2;
+}
+
+message GetStoreRequest{
+  int64 id=1;
+}
+
+message GetStoreResponse{
+  string name=1;
+  string location=2;
+  string description=3;
+  repeated int64 productIds=4;
+}
+
+message CreateStoreRequest{
+  string name=1;
+  string location=2;
+  string description=3;
+  repeated int64 productIds=4;
+}
+
+message CreateStoreResponse{
+  string confirmation=1;
+  int64 id=2;
+}
+
+message GetTrayRequest{
+  int64 id=1;
+}
+
+message GetTrayResponse{
+  double maxWeight=1;
+  string description=2;
+  repeated int64 animalParts=3;
+}
+
+message CreateTrayRequest{
+  double maxWeight=1;
+  string description=2;
+  repeated int64 animalParts=3;
+}
+
+message CreateTrayResponse{
+  string confirmation=1;
+  int64 id=2;
+}
+
+message GetAnimalPartTypeRequest{
+  int64 id=1;
+}
+
+message GetAnimalPartTypeResponse{
+  string name=1;
+  string description=2;
+  repeated int64 trayIds=3;
+  repeated int64 animalParts=4;
+}
+
+message CreateAnimalPartTypeRequest
+{
+  string name=1;
+  string description=2;
+  repeated int64 trayIds=3;
+  repeated int64 animalParts=4;
+}
+
+message CreateAnimalPartTypeResponse
+{
+  string confirmation=1;
+  int64 id=2;
+}
+
+
+
 service AnimalsService {
   rpc getAnimalIds(GetAnimalIdsRequest) returns (GetAnimalIdsResponse);
+  rpc getAnimal(GetAnimalRequest) returns (GetAnimalResponse);
+  rpc createAnimal(CreateAnimalRequest) returns (CreateAnimalResponse);
 }
+
+service AnimalPartsService{
+  rpc getAnimalPart(GetAnimalRequest) returns (GetAnimalPartResponse);
+  rpc createAnimalPart(CreateAnimalPartRequest) returns (CreateAnimalPartResponse);
+}
+
+service AnimalTypeService{
+  rpc getAnimalTypeService(GetAnimalTypeRequest) returns (GetAnimalTypeResponse);
+  rpc createAnimalTypeService(CreateAnimalTypeRequest) returns (CreateAnimalTypeResponse);
+}
+
+service FarmService{
+  rpc getFarmService(GetFarmRequest) returns (GetFarmResponse);
+  rpc createFarmService(CreateFarmRequest) returns (CreateFarmResponse);
+}
+
 
 service ProductsService {
   rpc getProductIds(GetProductIdsRequest) returns (GetProductIdsResponse);
+  rpc getProductService(GetProductRequest) returns (GetProductResponse);
+  rpc createProductService(CreateProductRequest) returns (CreateProductResponse);
 }
 
+service StoreService{
+  rpc getStoreService(GetStoreRequest) returns (GetStoreResponse);
+  rpc createStoreService(CreateStoreRequest) returns (CreateStoreResponse);
+}
+
+service TrayService{
+  rpc getTrayService(GetTrayRequest) returns (GetTrayResponse);
+  rpc createTrayService(CreateTrayRequest) returns (CreateTrayResponse);
+}
+
+service AnimalPartTypeService{
+  rpc getAnimalPartTypeService(GetAnimalPartTypeRequest) returns (GetAnimalPartTypeResponse);
+  rpc createAnimalPartTypeService(CreateAnimalPartTypeRequest) returns (CreateAnimalPartTypeResponse);
+}

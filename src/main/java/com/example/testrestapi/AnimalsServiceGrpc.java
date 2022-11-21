@@ -45,6 +45,68 @@ public final class AnimalsServiceGrpc {
     return getGetAnimalIdsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalRequest,
+      com.example.testrestapi.GetAnimalResponse> getGetAnimalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAnimal",
+      requestType = com.example.testrestapi.GetAnimalRequest.class,
+      responseType = com.example.testrestapi.GetAnimalResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalRequest,
+      com.example.testrestapi.GetAnimalResponse> getGetAnimalMethod() {
+    io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalRequest, com.example.testrestapi.GetAnimalResponse> getGetAnimalMethod;
+    if ((getGetAnimalMethod = AnimalsServiceGrpc.getGetAnimalMethod) == null) {
+      synchronized (AnimalsServiceGrpc.class) {
+        if ((getGetAnimalMethod = AnimalsServiceGrpc.getGetAnimalMethod) == null) {
+          AnimalsServiceGrpc.getGetAnimalMethod = getGetAnimalMethod =
+              io.grpc.MethodDescriptor.<com.example.testrestapi.GetAnimalRequest, com.example.testrestapi.GetAnimalResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.GetAnimalRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.GetAnimalResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AnimalsServiceMethodDescriptorSupplier("getAnimal"))
+              .build();
+        }
+      }
+    }
+    return getGetAnimalMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.CreateAnimalRequest,
+      com.example.testrestapi.CreateAnimalResponse> getCreateAnimalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createAnimal",
+      requestType = com.example.testrestapi.CreateAnimalRequest.class,
+      responseType = com.example.testrestapi.CreateAnimalResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.testrestapi.CreateAnimalRequest,
+      com.example.testrestapi.CreateAnimalResponse> getCreateAnimalMethod() {
+    io.grpc.MethodDescriptor<com.example.testrestapi.CreateAnimalRequest, com.example.testrestapi.CreateAnimalResponse> getCreateAnimalMethod;
+    if ((getCreateAnimalMethod = AnimalsServiceGrpc.getCreateAnimalMethod) == null) {
+      synchronized (AnimalsServiceGrpc.class) {
+        if ((getCreateAnimalMethod = AnimalsServiceGrpc.getCreateAnimalMethod) == null) {
+          AnimalsServiceGrpc.getCreateAnimalMethod = getCreateAnimalMethod =
+              io.grpc.MethodDescriptor.<com.example.testrestapi.CreateAnimalRequest, com.example.testrestapi.CreateAnimalResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createAnimal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.CreateAnimalRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.CreateAnimalResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AnimalsServiceMethodDescriptorSupplier("createAnimal"))
+              .build();
+        }
+      }
+    }
+    return getCreateAnimalMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +162,20 @@ public final class AnimalsServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalIdsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getAnimal(com.example.testrestapi.GetAnimalRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void createAnimal(com.example.testrestapi.CreateAnimalRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.CreateAnimalResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAnimalMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -109,6 +185,20 @@ public final class AnimalsServiceGrpc {
                 com.example.testrestapi.GetAnimalIdsRequest,
                 com.example.testrestapi.GetAnimalIdsResponse>(
                   this, METHODID_GET_ANIMAL_IDS)))
+          .addMethod(
+            getGetAnimalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.example.testrestapi.GetAnimalRequest,
+                com.example.testrestapi.GetAnimalResponse>(
+                  this, METHODID_GET_ANIMAL)))
+          .addMethod(
+            getCreateAnimalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.example.testrestapi.CreateAnimalRequest,
+                com.example.testrestapi.CreateAnimalResponse>(
+                  this, METHODID_CREATE_ANIMAL)))
           .build();
     }
   }
@@ -134,6 +224,22 @@ public final class AnimalsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnimalIdsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getAnimal(com.example.testrestapi.GetAnimalRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAnimalMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createAnimal(com.example.testrestapi.CreateAnimalRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.CreateAnimalResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAnimalMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +261,20 @@ public final class AnimalsServiceGrpc {
     public com.example.testrestapi.GetAnimalIdsResponse getAnimalIds(com.example.testrestapi.GetAnimalIdsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnimalIdsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.testrestapi.GetAnimalResponse getAnimal(com.example.testrestapi.GetAnimalRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAnimalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.testrestapi.CreateAnimalResponse createAnimal(com.example.testrestapi.CreateAnimalRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAnimalMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,9 +299,27 @@ public final class AnimalsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnimalIdsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.testrestapi.GetAnimalResponse> getAnimal(
+        com.example.testrestapi.GetAnimalRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAnimalMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.testrestapi.CreateAnimalResponse> createAnimal(
+        com.example.testrestapi.CreateAnimalRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAnimalMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ANIMAL_IDS = 0;
+  private static final int METHODID_GET_ANIMAL = 1;
+  private static final int METHODID_CREATE_ANIMAL = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -203,6 +341,14 @@ public final class AnimalsServiceGrpc {
         case METHODID_GET_ANIMAL_IDS:
           serviceImpl.getAnimalIds((com.example.testrestapi.GetAnimalIdsRequest) request,
               (io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalIdsResponse>) responseObserver);
+          break;
+        case METHODID_GET_ANIMAL:
+          serviceImpl.getAnimal((com.example.testrestapi.GetAnimalRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ANIMAL:
+          serviceImpl.createAnimal((com.example.testrestapi.CreateAnimalRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.testrestapi.CreateAnimalResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -266,6 +412,8 @@ public final class AnimalsServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AnimalsServiceFileDescriptorSupplier())
               .addMethod(getGetAnimalIdsMethod())
+              .addMethod(getGetAnimalMethod())
+              .addMethod(getCreateAnimalMethod())
               .build();
         }
       }
