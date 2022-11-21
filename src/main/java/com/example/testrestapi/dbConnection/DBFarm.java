@@ -32,9 +32,20 @@ public class DBFarm {
         }
     }
 
-    public static Farm createFarm(Farm farm)
-    {
-        return farm;
+    public static String createFarm(String name, String location, String description) throws SQLException {
+        try (Connection connection = LoadDriver.getDBConnection()) {
+
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("insert into farm (Name,Location, Description) " +
+                    "values (" + "'" +
+                    name + "', " + "'" +
+                    location+ "', "+ "'"+
+                    description + "');");
+            statement.close();
+            connection.close();
+            return "Ok";
+        }
+
     }
 
 }

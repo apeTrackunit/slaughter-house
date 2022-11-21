@@ -8,13 +8,13 @@ public class Product {
     private long id;
     private String name;
     private String description;
-    private List<AnimalPart> animalParts;
 
-    public Product(long id, String name, String description, List<AnimalPart> animalParts) {
+
+
+    public Product(long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.animalParts = animalParts;
     }
 
     public long getId() {
@@ -41,11 +41,11 @@ public class Product {
         this.description = description;
     }
 
-    public List<AnimalPart> getAnimalParts() {
-        return animalParts;
-    }
-
-    public void setAnimalParts(List<AnimalPart> animalParts) {
-        this.animalParts = animalParts;
-    }
+//    public List<AnimalPart> getAnimalParts() {
+//        return animalParts;
+//    }
+//
+//    public void setAnimalParts(List<AnimalPart> animalParts) {
+//        this.animalParts = animalParts;
+//    }
 }

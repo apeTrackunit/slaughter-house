@@ -2,6 +2,7 @@ package com.example.testrestapi.dbConnection;
 
 import com.example.testrestapi.entity.Product;
 
+import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -29,12 +30,31 @@ public class DBProduct {
             resultSet.close();
             statement.close();
             connection.close();
-            product = new Product(Id, Name, Description, null);
+            product = new Product(Id, Name, Description);
             return product;
 
         }
 
     }
+
+
+    public String createProduct(String name,String description, long storeId) throws SQLException {
+        try(Connection connection=LoadDriver.getDBConnection())
+        {
+            Statement statement= connection.createStatement();
+            statement.executeUpdate("insert into product (Name,Description,StoreId)"+
+                    "values(" + "'"+
+                    name +"',"+"'"+
+                    description+ "',"+"'"+
+                    storeId+"');");
+
+        statement.close();
+        connection.close();
+        return "Ok";
+        }
+    }
+
+
 
     public static ArrayList<Product> getProductsByAnimalId(long id) throws SQLException {
 
@@ -57,7 +77,7 @@ public class DBProduct {
                 long Id = resultSet.getLong("Id");
                 String Name = resultSet.getString("Name");
                 String Description = resultSet.getString("Description").trim();
-                products.add(new Product(Id, Name, Description, null));
+                products.add(new Product(Id, Name, Description));
 
             }
             resultSet.close();
