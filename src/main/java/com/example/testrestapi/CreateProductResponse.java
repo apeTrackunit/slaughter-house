@@ -55,11 +55,6 @@ private static final long serialVersionUID = 0L;
             confirmation_ = s;
             break;
           }
-          case 16: {
-
-            id_ = input.readInt64();
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -132,17 +127,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
-  /**
-   * <code>int64 id = 2;</code>
-   * @return The id.
-   */
-  @java.lang.Override
-  public long getId() {
-    return id_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -160,9 +144,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmation_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, confirmation_);
     }
-    if (id_ != 0L) {
-      output.writeInt64(2, id_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -174,10 +155,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmation_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, confirmation_);
-    }
-    if (id_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, id_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -196,8 +173,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getConfirmation()
         .equals(other.getConfirmation())) return false;
-    if (getId()
-        != other.getId()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -211,9 +186,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CONFIRMATION_FIELD_NUMBER;
     hash = (53 * hash) + getConfirmation().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getId());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -349,8 +321,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       confirmation_ = "";
 
-      id_ = 0L;
-
       return this;
     }
 
@@ -378,7 +348,6 @@ private static final long serialVersionUID = 0L;
     public com.example.testrestapi.CreateProductResponse buildPartial() {
       com.example.testrestapi.CreateProductResponse result = new com.example.testrestapi.CreateProductResponse(this);
       result.confirmation_ = confirmation_;
-      result.id_ = id_;
       onBuilt();
       return result;
     }
@@ -430,9 +399,6 @@ private static final long serialVersionUID = 0L;
       if (!other.getConfirmation().isEmpty()) {
         confirmation_ = other.confirmation_;
         onChanged();
-      }
-      if (other.getId() != 0L) {
-        setId(other.getId());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -535,37 +501,6 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       confirmation_ = value;
-      onChanged();
-      return this;
-    }
-
-    private long id_ ;
-    /**
-     * <code>int64 id = 2;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public long getId() {
-      return id_;
-    }
-    /**
-     * <code>int64 id = 2;</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setId(long value) {
-      
-      id_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 id = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      
-      id_ = 0L;
       onChanged();
       return this;
     }
