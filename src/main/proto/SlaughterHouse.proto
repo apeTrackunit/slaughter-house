@@ -33,7 +33,6 @@ message CreateAnimalRequest{
 
 message CreateAnimalResponse{
   string confirmation = 1;
-  int64 id = 2;
 }
 
 message GetAnimalPartRequest{
@@ -53,7 +52,6 @@ message CreateAnimalPartRequest{
 
 message CreateAnimalPartResponse{
   string confirmation = 1;
-  int64 id = 2;
 }
 
 message GetAnimalTypeRequest{
@@ -73,7 +71,6 @@ message CreateAnimalTypeRequest{
 
 message CreateAnimalTypeResponse{
   string confirmation = 1;
-  int64 id = 2;
 }
 
 message GetFarmRequest{
@@ -95,7 +92,6 @@ message CreateFarmRequest{
 
 message CreateFarmResponse{
   string confirmation=1;
-  int64 id=2;
 }
 
 
@@ -125,7 +121,6 @@ message CreateProductRequest{
 
 message CreateProductResponse{
   string confirmation=1;
-  int64 id=2;
 }
 
 message GetStoreRequest{
@@ -148,7 +143,6 @@ message CreateStoreRequest{
 
 message CreateStoreResponse{
   string confirmation=1;
-  int64 id=2;
 }
 
 message GetTrayRequest{
@@ -169,7 +163,6 @@ message CreateTrayRequest{
 
 message CreateTrayResponse{
   string confirmation=1;
-  int64 id=2;
 }
 
 message GetAnimalPartTypeRequest{
@@ -194,7 +187,6 @@ message CreateAnimalPartTypeRequest
 message CreateAnimalPartTypeResponse
 {
   string confirmation=1;
-  int64 id=2;
 }
 
 

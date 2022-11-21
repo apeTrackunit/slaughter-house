@@ -18,10 +18,4 @@ public interface CreateAnimalPartResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConfirmationBytes();
-
-  /**
-   * <code>int64 id = 2;</code>
-   * @return The id.
-   */
-  long getId();
 }

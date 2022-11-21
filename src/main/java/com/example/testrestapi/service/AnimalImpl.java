@@ -13,7 +13,25 @@ public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
 
     @Override
     public void getAnimal(GetAnimalRequest request, StreamObserver<GetAnimalResponse> responseObserver) {
-        super.getAnimal(request, responseObserver);
+        try{
+
+            Animal animal = DBAnimal.getAnimal(request.getAnimalId());
+
+            GetAnimalResponse.Builder builder = GetAnimalResponse.newBuilder();
+            builder.setAnimalId(animal.getId());
+            builder.setWeight(animal.getWeight());
+            builder.setIsOk(animal.isOk());
+            builder.setFarmId(1);
+            builder.setAnimalTypeId(1);
+            builder.setRegistrationDate("");
+
+            GetAnimalResponse responseText = builder.build();
+            responseObserver.onNext(responseText);
+            responseObserver.onCompleted();
+        }
+        catch (Exception ex){
+            System.out.println(ex.getStackTrace());
+        }
     }
 
     @Override

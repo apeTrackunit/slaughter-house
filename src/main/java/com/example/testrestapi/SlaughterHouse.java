@@ -213,111 +213,109 @@ public final class SlaughterHouse {
       "(\003\022\030\n\020registrationDate\030\006 \001(\t\"s\n\023CreateAn" +
       "imalRequest\022\016\n\006weight\030\001 \001(\003\022\014\n\004isOk\030\002 \001(" +
       "\010\022\016\n\006farmId\030\003 \001(\003\022\024\n\014animalTypeId\030\004 \001(\003\022" +
-      "\030\n\020registrationDate\030\005 \001(\t\"8\n\024CreateAnima" +
-      "lResponse\022\024\n\014confirmation\030\001 \001(\t\022\n\n\002id\030\002 " +
-      "\001(\003\"\"\n\024GetAnimalPartRequest\022\n\n\002id\030\001 \001(\003\"" +
-      "E\n\025GetAnimalPartResponse\022\n\n\002id\030\001 \001(\003\022\016\n\006" +
-      "weight\030\002 \001(\001\022\020\n\010animalId\030\003 \001(\003\";\n\027Create" +
-      "AnimalPartRequest\022\016\n\006weight\030\001 \001(\001\022\020\n\010ani" +
-      "malId\030\002 \001(\003\"<\n\030CreateAnimalPartResponse\022" +
-      "\024\n\014confirmation\030\001 \001(\t\022\n\n\002id\030\002 \001(\003\"\"\n\024Get" +
-      "AnimalTypeRequest\022\n\n\002id\030\001 \001(\003\"F\n\025GetAnim" +
-      "alTypeResponse\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t" +
-      "\022\023\n\013description\030\003 \001(\t\"<\n\027CreateAnimalTyp" +
-      "eRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
-      "\001(\t\"<\n\030CreateAnimalTypeResponse\022\024\n\014confi" +
-      "rmation\030\001 \001(\t\022\n\n\002id\030\002 \001(\003\"\034\n\016GetFarmRequ" +
-      "est\022\n\n\002id\030\001 \001(\003\"R\n\017GetFarmResponse\022\n\n\002id" +
-      "\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010location\030\003 \001(\t\022\023" +
-      "\n\013description\030\004 \001(\t\"H\n\021CreateFarmRequest" +
-      "\022\014\n\004name\030\002 \001(\t\022\020\n\010location\030\003 \001(\t\022\023\n\013desc" +
-      "ription\030\004 \001(\t\"6\n\022CreateFarmResponse\022\024\n\014c" +
-      "onfirmation\030\001 \001(\t\022\n\n\002id\030\002 \001(\003\"(\n\024GetProd" +
-      "uctIdsRequest\022\020\n\010animalId\030\001 \001(\003\"/\n\025GetPr" +
-      "oductIdsResponse\022\026\n\nproductIds\030\001 \003(\003B\002\020\001" +
-      "\"\037\n\021GetProductRequest\022\n\n\002id\030\001 \001(\003\"L\n\022Get" +
-      "ProductResponse\022\014\n\004name\030\001 \001(\t\022\023\n\013descrip" +
-      "tion\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"N\n\024Creat" +
-      "eProductRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013descrip" +
-      "tion\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"9\n\025Creat" +
-      "eProductResponse\022\024\n\014confirmation\030\001 \001(\t\022\n" +
-      "\n\002id\030\002 \001(\003\"\035\n\017GetStoreRequest\022\n\n\002id\030\001 \001(" +
-      "\003\"[\n\020GetStoreResponse\022\014\n\004name\030\001 \001(\t\022\020\n\010l" +
-      "ocation\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\022\n\npr" +
-      "oductIds\030\004 \003(\003\"]\n\022CreateStoreRequest\022\014\n\004" +
-      "name\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023\n\013descript" +
-      "ion\030\003 \001(\t\022\022\n\nproductIds\030\004 \003(\003\"7\n\023CreateS" +
-      "toreResponse\022\024\n\014confirmation\030\001 \001(\t\022\n\n\002id" +
-      "\030\002 \001(\003\"\034\n\016GetTrayRequest\022\n\n\002id\030\001 \001(\003\"N\n\017" +
-      "GetTrayResponse\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013de" +
-      "scription\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"P\n\021" +
-      "CreateTrayRequest\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013" +
-      "description\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"6" +
-      "\n\022CreateTrayResponse\022\024\n\014confirmation\030\001 \001" +
-      "(\t\022\n\n\002id\030\002 \001(\003\"&\n\030GetAnimalPartTypeReque" +
-      "st\022\n\n\002id\030\001 \001(\003\"d\n\031GetAnimalPartTypeRespo" +
-      "nse\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\017" +
-      "\n\007trayIds\030\003 \003(\003\022\023\n\013animalParts\030\004 \003(\003\"f\n\033" +
-      "CreateAnimalPartTypeRequest\022\014\n\004name\030\001 \001(" +
-      "\t\022\023\n\013description\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(\003\022" +
-      "\023\n\013animalParts\030\004 \003(\003\"@\n\034CreateAnimalPart" +
-      "TypeResponse\022\024\n\014confirmation\030\001 \001(\t\022\n\n\002id" +
-      "\030\002 \001(\0032\316\002\n\016AnimalsService\022k\n\014getAnimalId" +
-      "s\022,.com.example.testrestapi.GetAnimalIds" +
-      "Request\032-.com.example.testrestapi.GetAni" +
-      "malIdsResponse\022b\n\tgetAnimal\022).com.exampl" +
-      "e.testrestapi.GetAnimalRequest\032*.com.exa" +
-      "mple.testrestapi.GetAnimalResponse\022k\n\014cr" +
-      "eateAnimal\022,.com.example.testrestapi.Cre" +
-      "ateAnimalRequest\032-.com.example.testresta" +
-      "pi.CreateAnimalResponse2\371\001\n\022AnimalPartsS" +
-      "ervice\022j\n\rgetAnimalPart\022).com.example.te" +
-      "strestapi.GetAnimalRequest\032..com.example" +
-      ".testrestapi.GetAnimalPartResponse\022w\n\020cr" +
-      "eateAnimalPart\0220.com.example.testrestapi" +
-      ".CreateAnimalPartRequest\0321.com.example.t" +
-      "estrestapi.CreateAnimalPartResponse2\212\002\n\021" +
-      "AnimalTypeService\022u\n\024getAnimalTypeServic" +
-      "e\022-.com.example.testrestapi.GetAnimalTyp" +
-      "eRequest\032..com.example.testrestapi.GetAn" +
-      "imalTypeResponse\022~\n\027createAnimalTypeServ" +
-      "ice\0220.com.example.testrestapi.CreateAnim" +
-      "alTypeRequest\0321.com.example.testrestapi." +
-      "CreateAnimalTypeResponse2\340\001\n\013FarmService" +
-      "\022c\n\016getFarmService\022\'.com.example.testres" +
-      "tapi.GetFarmRequest\032(.com.example.testre" +
-      "stapi.GetFarmResponse\022l\n\021createFarmServi" +
-      "ce\022*.com.example.testrestapi.CreateFarmR" +
-      "equest\032+.com.example.testrestapi.CreateF" +
-      "armResponse2\346\002\n\017ProductsService\022n\n\rgetPr" +
-      "oductIds\022-.com.example.testrestapi.GetPr" +
-      "oductIdsRequest\032..com.example.testrestap" +
-      "i.GetProductIdsResponse\022l\n\021getProductSer" +
-      "vice\022*.com.example.testrestapi.GetProduc" +
-      "tRequest\032+.com.example.testrestapi.GetPr" +
-      "oductResponse\022u\n\024createProductService\022-." +
-      "com.example.testrestapi.CreateProductReq" +
-      "uest\032..com.example.testrestapi.CreatePro" +
-      "ductResponse2\347\001\n\014StoreService\022f\n\017getStor" +
-      "eService\022(.com.example.testrestapi.GetSt" +
-      "oreRequest\032).com.example.testrestapi.Get" +
-      "StoreResponse\022o\n\022createStoreService\022+.co" +
-      "m.example.testrestapi.CreateStoreRequest" +
-      "\032,.com.example.testrestapi.CreateStoreRe" +
-      "sponse2\340\001\n\013TrayService\022c\n\016getTrayService" +
-      "\022\'.com.example.testrestapi.GetTrayReques" +
-      "t\032(.com.example.testrestapi.GetTrayRespo" +
-      "nse\022l\n\021createTrayService\022*.com.example.t" +
-      "estrestapi.CreateTrayRequest\032+.com.examp" +
-      "le.testrestapi.CreateTrayResponse2\250\002\n\025An" +
-      "imalPartTypeService\022\201\001\n\030getAnimalPartTyp" +
-      "eService\0221.com.example.testrestapi.GetAn" +
-      "imalPartTypeRequest\0322.com.example.testre" +
-      "stapi.GetAnimalPartTypeResponse\022\212\001\n\033crea" +
-      "teAnimalPartTypeService\0224.com.example.te" +
-      "strestapi.CreateAnimalPartTypeRequest\0325." +
-      "com.example.testrestapi.CreateAnimalPart" +
-      "TypeResponseB\002P\001b\006proto3"
+      "\030\n\020registrationDate\030\005 \001(\t\",\n\024CreateAnima" +
+      "lResponse\022\024\n\014confirmation\030\001 \001(\t\"\"\n\024GetAn" +
+      "imalPartRequest\022\n\n\002id\030\001 \001(\003\"E\n\025GetAnimal" +
+      "PartResponse\022\n\n\002id\030\001 \001(\003\022\016\n\006weight\030\002 \001(\001" +
+      "\022\020\n\010animalId\030\003 \001(\003\";\n\027CreateAnimalPartRe" +
+      "quest\022\016\n\006weight\030\001 \001(\001\022\020\n\010animalId\030\002 \001(\003\"" +
+      "0\n\030CreateAnimalPartResponse\022\024\n\014confirmat" +
+      "ion\030\001 \001(\t\"\"\n\024GetAnimalTypeRequest\022\n\n\002id\030" +
+      "\001 \001(\003\"F\n\025GetAnimalTypeResponse\022\n\n\002id\030\001 \001" +
+      "(\003\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\"<\n" +
+      "\027CreateAnimalTypeRequest\022\014\n\004name\030\001 \001(\t\022\023" +
+      "\n\013description\030\002 \001(\t\"0\n\030CreateAnimalTypeR" +
+      "esponse\022\024\n\014confirmation\030\001 \001(\t\"\034\n\016GetFarm" +
+      "Request\022\n\n\002id\030\001 \001(\003\"R\n\017GetFarmResponse\022\n" +
+      "\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010location\030\003 \001" +
+      "(\t\022\023\n\013description\030\004 \001(\t\"H\n\021CreateFarmReq" +
+      "uest\022\014\n\004name\030\002 \001(\t\022\020\n\010location\030\003 \001(\t\022\023\n\013" +
+      "description\030\004 \001(\t\"*\n\022CreateFarmResponse\022" +
+      "\024\n\014confirmation\030\001 \001(\t\"(\n\024GetProductIdsRe" +
+      "quest\022\020\n\010animalId\030\001 \001(\003\"/\n\025GetProductIds" +
+      "Response\022\026\n\nproductIds\030\001 \003(\003B\002\020\001\"\037\n\021GetP" +
+      "roductRequest\022\n\n\002id\030\001 \001(\003\"L\n\022GetProductR" +
+      "esponse\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
+      "(\t\022\023\n\013animalParts\030\003 \003(\003\"N\n\024CreateProduct" +
+      "Request\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
+      "(\t\022\023\n\013animalParts\030\003 \003(\003\"-\n\025CreateProduct" +
+      "Response\022\024\n\014confirmation\030\001 \001(\t\"\035\n\017GetSto" +
+      "reRequest\022\n\n\002id\030\001 \001(\003\"[\n\020GetStoreRespons" +
+      "e\022\014\n\004name\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023\n\013des" +
+      "cription\030\003 \001(\t\022\022\n\nproductIds\030\004 \003(\003\"]\n\022Cr" +
+      "eateStoreRequest\022\014\n\004name\030\001 \001(\t\022\020\n\010locati" +
+      "on\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\022\n\nproduct" +
+      "Ids\030\004 \003(\003\"+\n\023CreateStoreResponse\022\024\n\014conf" +
+      "irmation\030\001 \001(\t\"\034\n\016GetTrayRequest\022\n\n\002id\030\001" +
+      " \001(\003\"N\n\017GetTrayResponse\022\021\n\tmaxWeight\030\001 \001" +
+      "(\001\022\023\n\013description\030\002 \001(\t\022\023\n\013animalParts\030\003" +
+      " \003(\003\"P\n\021CreateTrayRequest\022\021\n\tmaxWeight\030\001" +
+      " \001(\001\022\023\n\013description\030\002 \001(\t\022\023\n\013animalParts" +
+      "\030\003 \003(\003\"*\n\022CreateTrayResponse\022\024\n\014confirma" +
+      "tion\030\001 \001(\t\"&\n\030GetAnimalPartTypeRequest\022\n" +
+      "\n\002id\030\001 \001(\003\"d\n\031GetAnimalPartTypeResponse\022" +
+      "\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\017\n\007tr" +
+      "ayIds\030\003 \003(\003\022\023\n\013animalParts\030\004 \003(\003\"f\n\033Crea" +
+      "teAnimalPartTypeRequest\022\014\n\004name\030\001 \001(\t\022\023\n" +
+      "\013description\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(\003\022\023\n\013a" +
+      "nimalParts\030\004 \003(\003\"4\n\034CreateAnimalPartType" +
+      "Response\022\024\n\014confirmation\030\001 \001(\t2\316\002\n\016Anima" +
+      "lsService\022k\n\014getAnimalIds\022,.com.example." +
+      "testrestapi.GetAnimalIdsRequest\032-.com.ex" +
+      "ample.testrestapi.GetAnimalIdsResponse\022b" +
+      "\n\tgetAnimal\022).com.example.testrestapi.Ge" +
+      "tAnimalRequest\032*.com.example.testrestapi" +
+      ".GetAnimalResponse\022k\n\014createAnimal\022,.com" +
+      ".example.testrestapi.CreateAnimalRequest" +
+      "\032-.com.example.testrestapi.CreateAnimalR" +
+      "esponse2\371\001\n\022AnimalPartsService\022j\n\rgetAni" +
+      "malPart\022).com.example.testrestapi.GetAni" +
+      "malRequest\032..com.example.testrestapi.Get" +
+      "AnimalPartResponse\022w\n\020createAnimalPart\0220" +
+      ".com.example.testrestapi.CreateAnimalPar" +
+      "tRequest\0321.com.example.testrestapi.Creat" +
+      "eAnimalPartResponse2\212\002\n\021AnimalTypeServic" +
+      "e\022u\n\024getAnimalTypeService\022-.com.example." +
+      "testrestapi.GetAnimalTypeRequest\032..com.e" +
+      "xample.testrestapi.GetAnimalTypeResponse" +
+      "\022~\n\027createAnimalTypeService\0220.com.exampl" +
+      "e.testrestapi.CreateAnimalTypeRequest\0321." +
+      "com.example.testrestapi.CreateAnimalType" +
+      "Response2\340\001\n\013FarmService\022c\n\016getFarmServi" +
+      "ce\022\'.com.example.testrestapi.GetFarmRequ" +
+      "est\032(.com.example.testrestapi.GetFarmRes" +
+      "ponse\022l\n\021createFarmService\022*.com.example" +
+      ".testrestapi.CreateFarmRequest\032+.com.exa" +
+      "mple.testrestapi.CreateFarmResponse2\346\002\n\017" +
+      "ProductsService\022n\n\rgetProductIds\022-.com.e" +
+      "xample.testrestapi.GetProductIdsRequest\032" +
+      "..com.example.testrestapi.GetProductIdsR" +
+      "esponse\022l\n\021getProductService\022*.com.examp" +
+      "le.testrestapi.GetProductRequest\032+.com.e" +
+      "xample.testrestapi.GetProductResponse\022u\n" +
+      "\024createProductService\022-.com.example.test" +
+      "restapi.CreateProductRequest\032..com.examp" +
+      "le.testrestapi.CreateProductResponse2\347\001\n" +
+      "\014StoreService\022f\n\017getStoreService\022(.com.e" +
+      "xample.testrestapi.GetStoreRequest\032).com" +
+      ".example.testrestapi.GetStoreResponse\022o\n" +
+      "\022createStoreService\022+.com.example.testre" +
+      "stapi.CreateStoreRequest\032,.com.example.t" +
+      "estrestapi.CreateStoreResponse2\340\001\n\013TrayS" +
+      "ervice\022c\n\016getTrayService\022\'.com.example.t" +
+      "estrestapi.GetTrayRequest\032(.com.example." +
+      "testrestapi.GetTrayResponse\022l\n\021createTra" +
+      "yService\022*.com.example.testrestapi.Creat" +
+      "eTrayRequest\032+.com.example.testrestapi.C" +
+      "reateTrayResponse2\250\002\n\025AnimalPartTypeServ" +
+      "ice\022\201\001\n\030getAnimalPartTypeService\0221.com.e" +
+      "xample.testrestapi.GetAnimalPartTypeRequ" +
+      "est\0322.com.example.testrestapi.GetAnimalP" +
+      "artTypeResponse\022\212\001\n\033createAnimalPartType" +
+      "Service\0224.com.example.testrestapi.Create" +
+      "AnimalPartTypeRequest\0325.com.example.test" +
+      "restapi.CreateAnimalPartTypeResponseB\002P\001" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -358,7 +356,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateAnimalResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateAnimalResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetAnimalPartRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_example_testrestapi_GetAnimalPartRequest_fieldAccessorTable = new
@@ -382,7 +380,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateAnimalPartResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateAnimalPartResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetAnimalTypeRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_com_example_testrestapi_GetAnimalTypeRequest_fieldAccessorTable = new
@@ -406,7 +404,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateAnimalTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateAnimalTypeResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetFarmRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_com_example_testrestapi_GetFarmRequest_fieldAccessorTable = new
@@ -430,7 +428,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateFarmResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateFarmResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetProductIdsRequest_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_com_example_testrestapi_GetProductIdsRequest_fieldAccessorTable = new
@@ -466,7 +464,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateProductResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetStoreRequest_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_com_example_testrestapi_GetStoreRequest_fieldAccessorTable = new
@@ -490,7 +488,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateStoreResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateStoreResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetTrayRequest_descriptor =
       getDescriptor().getMessageTypes().get(28);
     internal_static_com_example_testrestapi_GetTrayRequest_fieldAccessorTable = new
@@ -514,7 +512,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateTrayResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateTrayResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
     internal_static_com_example_testrestapi_GetAnimalPartTypeRequest_descriptor =
       getDescriptor().getMessageTypes().get(32);
     internal_static_com_example_testrestapi_GetAnimalPartTypeRequest_fieldAccessorTable = new
@@ -538,7 +536,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_descriptor,
-        new java.lang.String[] { "Confirmation", "Id", });
+        new java.lang.String[] { "Confirmation", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
