@@ -33,12 +33,54 @@ public class DBAnimal {
 
     }
 
+    public static Animal getAnimal(long id) throws SQLException {
+        try (Connection connection = LoadDriver.getDBConnection()) {
+
+            Statement statement = connection.createStatement();
+            ResultSet resultSet;
+            resultSet = statement.executeQuery(
+                    "select * from animal " +
+                            "where id = " +
+                            id + ";");
+
+            Animal animal = null;
+
+            while (resultSet.next()) {
+                long Id = resultSet.getLong("Id");
+                long Weight = resultSet.getLong("Weight");
+                boolean IsOk = resultSet.getBoolean("IsOk");
+                animal = new Animal(Id, Weight, IsOk, null, null, null);
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+            return animal;
+        }
+    }
+
+    public static String createAnimal(long weight, boolean isOk, long farmId, long animalTypeId) throws SQLException {
+        try (Connection connection = LoadDriver.getDBConnection()) {
+
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(
+                    "insert into animal " +
+                            "(Weight, IsOk, FarmId, AnimalTypeId)\n" +
+                            "values (" +
+                            weight + ", " +
+                            isOk + ", " +
+                            farmId + ", " +
+                            animalTypeId + ");");
+            statement.close();
+            connection.close();
+            return "Ok";
+        }
+    }
+
     public static ArrayList<Animal> getAnimalsByProductId(long id) throws SQLException {
 
         try (Connection connection = LoadDriver.getDBConnection()) {
 
-            Statement statement;
-            statement = connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet resultSet;
             resultSet = statement.executeQuery(
                     "select * from animal\n" +
