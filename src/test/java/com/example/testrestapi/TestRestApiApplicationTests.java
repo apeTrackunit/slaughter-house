@@ -1,8 +1,6 @@
 package com.example.testrestapi;
 
-import com.example.testrestapi.dbConnection.DBAnimal;
-import com.example.testrestapi.dbConnection.DBStore;
-import com.example.testrestapi.dbConnection.DBAnimalPart;
+import com.example.testrestapi.dbConnection.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,11 +11,27 @@ class TestRestApiApplicationTests {
 
     @Test
     void contextLoads() {
-//        DBAnimal dbAnimal = new DBAnimal();
+    }
 
-        DBStore dbStore=new DBStore();
+    @Test
+    void dbConnection(){
+        DBAnimal dbAnimal = new DBAnimal();
+        DBAnimalPart dbAnimalPart = new DBAnimalPart();
+        DBAnimalPartType dbAnimalPartType = new DBAnimalPartType();
+        DBAnimalType dbAnimalType = new DBAnimalType();
+
         try {
-            System.out.println(dbStore.createStore("lidl", "zadok", "velky"));
+            System.out.println("Animal");
+            System.out.println(dbAnimal.getAnimal(1));
+            System.out.println(dbAnimal.createAnimal(40, true, 1, 1));
+            System.out.println("Animal Part");
+            System.out.println(dbAnimalPart.getAnimalPart(1));
+            System.out.println(dbAnimalPart.createAnimalPart(30, 1, 1, 1));
+            System.out.println("Animal Part Type");
+            System.out.println(dbAnimalPartType.getAnimalPartType(1));
+            System.out.println(dbAnimalPartType.createAnimalPartType("Stehienko", "Jaaaaaj tak by som si dal"));
+            System.out.println(dbAnimalType.getAnimalType(1));
+            System.out.println(dbAnimalType.createAnimalType("Space cow", "She gonna abduct you!!!!"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -8,15 +8,6 @@ public class AnimalType {
     private long id;
     private String name;
     private String description;
-
-    public ArrayList<Animal> getAnimals() {
-        return animals;
-    }
-
-    public void setAnimals(ArrayList<Animal> animals) {
-        this.animals = animals;
-    }
-
     private ArrayList<Animal> animals;
 
     public AnimalType(long id, String name, String description) {
@@ -25,6 +16,13 @@ public class AnimalType {
         this.description = description;
     }
 
+    public ArrayList<Animal> getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(ArrayList<Animal> animals) {
+        this.animals = animals;
+    }
     public long getId() {
         return id;
     }
