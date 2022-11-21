@@ -18,11 +18,12 @@ public class Store {
 
     private ArrayList<Product> products;
 
-    public Store(long id, String name, String location, String description) {
+    public Store(long id, String name, String location, String description, ArrayList<Product> products) {
         this.id = id;
         this.name = name;
         this.location = location;
         this.description = description;
+        this.products=products;
     }
 
     public long getId() {

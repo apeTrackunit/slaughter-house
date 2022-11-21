@@ -1,6 +1,7 @@
 package com.example.testrestapi;
 
 import com.example.testrestapi.dbConnection.DBAnimal;
+import com.example.testrestapi.dbConnection.DBStore;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -11,10 +12,11 @@ class TestRestApiApplicationTests {
 
     @Test
     void contextLoads() {
-        DBAnimal dbAnimal = new DBAnimal();
+//        DBAnimal dbAnimal = new DBAnimal();
 
+        DBStore dbStore=new DBStore();
         try {
-            System.out.println(dbAnimal.createAnimal(20, true, 1, 1));
+            System.out.println(dbStore.createStore("lidl", "zadok", "velky"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
