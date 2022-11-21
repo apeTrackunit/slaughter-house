@@ -2,6 +2,7 @@ package com.example.testrestapi;
 
 import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.dbConnection.DBStore;
+import com.example.testrestapi.dbConnection.DBAnimalPart;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

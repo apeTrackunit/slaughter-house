@@ -40,13 +40,11 @@ public class DBStore {
         try (Connection connection = LoadDriver.getDBConnection()) {
 
             Statement statement = connection.createStatement();
-            statement.executeUpdate(
-                    "insert into store " +
-                            "(Name,Location,Description)\n" +
-                            "values (" +
-                            name + "," +
-                            location + "," +
-                            description + ");");
+            statement.executeUpdate("insert into store (StoreName, Location, Description) " +
+                    "values (" + "'" +
+                    name + "', " + "'" +
+                    location + "', " + "'" +
+                    description + "');");
             statement.close();
             connection.close();
             return "Ok";

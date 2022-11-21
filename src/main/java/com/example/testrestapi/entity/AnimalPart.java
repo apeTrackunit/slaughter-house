@@ -6,12 +6,31 @@ public class AnimalPart {
     private long id;
     private double weight;
     private Animal animal;
+    private Product product;
+    private Tray tray;
 
+    public Product getProduct() {
+        return product;
+    }
 
-    public AnimalPart(long id, double weight, Animal animal) {
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public Tray getTray() {
+        return tray;
+    }
+
+    public void setTray(Tray tray) {
+        this.tray = tray;
+    }
+
+    public AnimalPart(long id, double weight, Animal animal, Product product, Tray tray) {
         this.id = id;
         this.weight = weight;
         this.animal = animal;
+        this.product = product;
+        this.tray = tray;
     }
 
     public long getId() {
