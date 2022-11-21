@@ -13,12 +13,12 @@ public class LoadDriver {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/slaughterhouse",
-                    "root", "HesloJeNajlepsieHeslo");
+                    "root", "password");
             System.out.println("Driver loaded ok");
 
             // slaughterhouse is database
-            // root is user name
-            // HesloJeNajlepsieHeslo is database password
+            // root is the user name
+            // password is database password
         return connection;
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
