@@ -7,6 +7,7 @@ public class AnimalPart {
     private double weight;
     private Animal animal;
 
+
     public AnimalPart(long id, double weight, Animal animal) {
         this.id = id;
         this.weight = weight;

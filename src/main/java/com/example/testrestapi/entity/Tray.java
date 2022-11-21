@@ -1,9 +1,12 @@
 package com.example.testrestapi.entity;
 
+import java.util.ArrayList;
+
 public class Tray {
    private long id;
    private double max_weight;
    private String description;
+   private ArrayList<AnimalPart> animalParts;
 
     public Tray(long id, double max_weight, String description) {
         this.id = id;

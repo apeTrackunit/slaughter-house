@@ -1,13 +1,33 @@
 package com.example.testrestapi.entity;
 
+import java.util.ArrayList;
+
 public class AnimalPartType {
     private long id;
     private String name;
     private String description;
-    private Tray traId;
+    private ArrayList<Tray> tray;
+    private ArrayList<AnimalPart> animalParts;
+
+    public ArrayList<Tray> getTray() {
+        return tray;
+    }
+
+    public void setTray(ArrayList<Tray> tray) {
+        this.tray = tray;
+    }
+
+    public ArrayList<AnimalPart> getAnimalParts() {
+        return animalParts;
+    }
+
+    public void setAnimalParts(ArrayList<AnimalPart> animalParts) {
+        this.animalParts = animalParts;
+    }
 
     public AnimalPartType(long id, String name, String description) {
         this.id = id;
+
         this.name = name;
         this.description = description;
     }
@@ -36,11 +56,4 @@ public class AnimalPartType {
         this.description = description;
     }
 
-    public Tray getTraId() {
-        return traId;
-    }
-
-    public void setTraId(Tray traId) {
-        this.traId = traId;
-    }
 }
