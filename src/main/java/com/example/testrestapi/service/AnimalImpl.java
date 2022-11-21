@@ -1,8 +1,6 @@
 package com.example.testrestapi.service;
 
-import com.example.testrestapi.AnimalsServiceGrpc;
-import com.example.testrestapi.GetAnimalIdsRequest;
-import com.example.testrestapi.GetAnimalIdsResponse;
+import com.example.testrestapi.*;
 import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.entity.Animal;
 import io.grpc.stub.StreamObserver;
@@ -13,6 +11,15 @@ import java.util.List;
 
 public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
 
+    @Override
+    public void getAnimal(GetAnimalRequest request, StreamObserver<GetAnimalResponse> responseObserver) {
+        super.getAnimal(request, responseObserver);
+    }
+
+    @Override
+    public void createAnimal(CreateAnimalRequest request, StreamObserver<CreateAnimalResponse> responseObserver) {
+        super.createAnimal(request, responseObserver);
+    }
 
     @Override
     public void getAnimalIds(GetAnimalIdsRequest request, StreamObserver<GetAnimalIdsResponse> responseObserver) {
@@ -32,4 +39,5 @@ public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
             System.out.println(ex.getStackTrace());
         }
     }
+
 }
