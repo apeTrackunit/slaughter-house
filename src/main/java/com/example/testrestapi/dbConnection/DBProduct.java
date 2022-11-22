@@ -38,7 +38,7 @@ public class DBProduct {
     }
 
 
-    public String createProduct(String name,String description, long storeId) throws SQLException {
+    public static String createProduct(String name,String description, long storeId) throws SQLException {
         try(Connection connection=LoadDriver.getDBConnection())
         {
             Statement statement= connection.createStatement();
