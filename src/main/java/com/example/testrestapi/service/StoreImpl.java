@@ -6,9 +6,11 @@ import com.example.testrestapi.dbConnection.DBStore;
 import com.example.testrestapi.entity.Farm;
 import com.example.testrestapi.entity.Store;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
+@Service
 public class StoreImpl extends StoreServiceGrpc.StoreServiceImplBase {
 
     @Override

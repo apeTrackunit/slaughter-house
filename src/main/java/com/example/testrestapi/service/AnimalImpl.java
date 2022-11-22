@@ -5,12 +5,19 @@ import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.entity.Animal;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class AnimalImpl extends AnimalsServiceGrpc.AnimalsServiceImplBase {
 
+    /**
+     * Unnecessary
+     * @param request
+     * @param responseObserver
+     */
     @Override
     public void getAnimal(GetAnimalRequest request, StreamObserver<GetAnimalResponse> responseObserver) {
         try{

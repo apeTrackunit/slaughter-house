@@ -4,9 +4,11 @@ import com.example.testrestapi.*;
 import com.example.testrestapi.dbConnection.DBAnimalPartType;
 import com.example.testrestapi.entity.AnimalPartType;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
+@Service
 public class AnimalPartTypeImpl extends AnimalPartTypeServiceGrpc.AnimalPartTypeServiceImplBase {
 
     @Override

@@ -4,9 +4,11 @@ import com.example.testrestapi.*;
 import com.example.testrestapi.dbConnection.DBFarm;
 import com.example.testrestapi.entity.Farm;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
+@Service
 public class FarmImpl extends FarmServiceGrpc.FarmServiceImplBase {
 
     @Override

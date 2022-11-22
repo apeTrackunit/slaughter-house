@@ -4,6 +4,7 @@ import com.example.testrestapi.*;
 import com.example.testrestapi.dbConnection.DBProduct;
 import com.example.testrestapi.entity.Product;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,8 +12,14 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+@Service
 public class ProductImpl extends ProductsServiceGrpc.ProductsServiceImplBase {
 
+    /**
+     * Unnecessary
+     * @param request
+     * @param responseObserver
+     */
     @Override
     public void getProductService(GetProductRequest request, StreamObserver<GetProductResponse> responseObserver) {
         try {
@@ -32,6 +39,11 @@ public class ProductImpl extends ProductsServiceGrpc.ProductsServiceImplBase {
 
     }
 
+    /**
+     * Unnecessary
+     * @param request
+     * @param responseObserver
+     */
     @Override
     public void createProductService(CreateProductRequest request, StreamObserver<CreateProductResponse> responseObserver) {
         try {
@@ -60,7 +72,6 @@ public class ProductImpl extends ProductsServiceGrpc.ProductsServiceImplBase {
 
             GetProductIdsResponse.Builder builder = GetProductIdsResponse.newBuilder();
             builder.addAllProductIds(products.stream().map(x -> x.getId()).toList());
-
 
             GetProductIdsResponse responseText = builder.build();
             responseObserver.onNext(responseText);

@@ -4,9 +4,11 @@ import com.example.testrestapi.*;
 import com.example.testrestapi.dbConnection.DBAnimalType;
 import com.example.testrestapi.entity.AnimalType;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
+@Service
 public class AnimalTypeImpl extends AnimalTypeServiceGrpc.AnimalTypeServiceImplBase {
     @Override
     public void getAnimalTypeService(GetAnimalTypeRequest request, StreamObserver<GetAnimalTypeResponse> responseObserver) {

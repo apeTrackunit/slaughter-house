@@ -4,9 +4,11 @@ import com.example.testrestapi.*;
 import com.example.testrestapi.dbConnection.DBTray;
 import com.example.testrestapi.entity.Tray;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
+@Service
 public class TrayImpl extends TrayServiceGrpc.TrayServiceImplBase {
     @Override
     public void getTrayService(GetTrayRequest request, StreamObserver<GetTrayResponse> responseObserver) {

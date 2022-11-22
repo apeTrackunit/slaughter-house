@@ -5,10 +5,12 @@ import com.example.testrestapi.dbConnection.DBAnimal;
 import com.example.testrestapi.dbConnection.DBAnimalPart;
 import com.example.testrestapi.entity.AnimalPart;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.awt.image.BufferedImage;
 import java.sql.SQLException;
 
+@Service
 public class AnimalPartImpl extends AnimalPartsServiceGrpc.AnimalPartsServiceImplBase {
 
     @Override
