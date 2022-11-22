@@ -14,27 +14,27 @@ public final class AnimalPartsServiceGrpc {
   public static final String SERVICE_NAME = "com.example.testrestapi.AnimalPartsService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalRequest,
+  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalPartRequest,
       com.example.testrestapi.GetAnimalPartResponse> getGetAnimalPartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAnimalPart",
-      requestType = com.example.testrestapi.GetAnimalRequest.class,
+      requestType = com.example.testrestapi.GetAnimalPartRequest.class,
       responseType = com.example.testrestapi.GetAnimalPartResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalRequest,
+  public static io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalPartRequest,
       com.example.testrestapi.GetAnimalPartResponse> getGetAnimalPartMethod() {
-    io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalRequest, com.example.testrestapi.GetAnimalPartResponse> getGetAnimalPartMethod;
+    io.grpc.MethodDescriptor<com.example.testrestapi.GetAnimalPartRequest, com.example.testrestapi.GetAnimalPartResponse> getGetAnimalPartMethod;
     if ((getGetAnimalPartMethod = AnimalPartsServiceGrpc.getGetAnimalPartMethod) == null) {
       synchronized (AnimalPartsServiceGrpc.class) {
         if ((getGetAnimalPartMethod = AnimalPartsServiceGrpc.getGetAnimalPartMethod) == null) {
           AnimalPartsServiceGrpc.getGetAnimalPartMethod = getGetAnimalPartMethod =
-              io.grpc.MethodDescriptor.<com.example.testrestapi.GetAnimalRequest, com.example.testrestapi.GetAnimalPartResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.example.testrestapi.GetAnimalPartRequest, com.example.testrestapi.GetAnimalPartResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimalPart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.testrestapi.GetAnimalRequest.getDefaultInstance()))
+                  com.example.testrestapi.GetAnimalPartRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.example.testrestapi.GetAnimalPartResponse.getDefaultInstance()))
               .setSchemaDescriptor(new AnimalPartsServiceMethodDescriptorSupplier("getAnimalPart"))
@@ -126,7 +126,7 @@ public final class AnimalPartsServiceGrpc {
 
     /**
      */
-    public void getAnimalPart(com.example.testrestapi.GetAnimalRequest request,
+    public void getAnimalPart(com.example.testrestapi.GetAnimalPartRequest request,
         io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalPartResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalPartMethod(), responseObserver);
     }
@@ -144,7 +144,7 @@ public final class AnimalPartsServiceGrpc {
             getGetAnimalPartMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.example.testrestapi.GetAnimalRequest,
+                com.example.testrestapi.GetAnimalPartRequest,
                 com.example.testrestapi.GetAnimalPartResponse>(
                   this, METHODID_GET_ANIMAL_PART)))
           .addMethod(
@@ -174,7 +174,7 @@ public final class AnimalPartsServiceGrpc {
 
     /**
      */
-    public void getAnimalPart(com.example.testrestapi.GetAnimalRequest request,
+    public void getAnimalPart(com.example.testrestapi.GetAnimalPartRequest request,
         io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalPartResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnimalPartMethod(), getCallOptions()), request, responseObserver);
@@ -205,7 +205,7 @@ public final class AnimalPartsServiceGrpc {
 
     /**
      */
-    public com.example.testrestapi.GetAnimalPartResponse getAnimalPart(com.example.testrestapi.GetAnimalRequest request) {
+    public com.example.testrestapi.GetAnimalPartResponse getAnimalPart(com.example.testrestapi.GetAnimalPartRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnimalPartMethod(), getCallOptions(), request);
     }
@@ -235,7 +235,7 @@ public final class AnimalPartsServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.example.testrestapi.GetAnimalPartResponse> getAnimalPart(
-        com.example.testrestapi.GetAnimalRequest request) {
+        com.example.testrestapi.GetAnimalPartRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnimalPartMethod(), getCallOptions()), request);
     }
@@ -270,7 +270,7 @@ public final class AnimalPartsServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ANIMAL_PART:
-          serviceImpl.getAnimalPart((com.example.testrestapi.GetAnimalRequest) request,
+          serviceImpl.getAnimalPart((com.example.testrestapi.GetAnimalPartRequest) request,
               (io.grpc.stub.StreamObserver<com.example.testrestapi.GetAnimalPartResponse>) responseObserver);
           break;
         case METHODID_CREATE_ANIMAL_PART:

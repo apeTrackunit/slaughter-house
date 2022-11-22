@@ -8,10 +8,10 @@ public interface CreateAnimalPartRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>double weight = 1;</code>
+   * <code>int64 weight = 1;</code>
    * @return The weight.
    */
-  double getWeight();
+  long getWeight();
 
   /**
    * <code>int64 animalId = 2;</code>

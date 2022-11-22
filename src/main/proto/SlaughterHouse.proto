@@ -46,7 +46,7 @@ message GetAnimalPartResponse{
 }
 
 message CreateAnimalPartRequest{
-  double weight = 1;
+  int64 weight = 1;
   int64 animalId = 2;
 }
 
@@ -198,7 +198,7 @@ service AnimalsService {
 }
 
 service AnimalPartsService{
-  rpc getAnimalPart(GetAnimalRequest) returns (GetAnimalPartResponse);
+  rpc getAnimalPart(GetAnimalPartRequest) returns (GetAnimalPartResponse);
   rpc createAnimalPart(CreateAnimalPartRequest) returns (CreateAnimalPartResponse);
 }
 

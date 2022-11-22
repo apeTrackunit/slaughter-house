@@ -6,8 +6,7 @@ import com.example.testrestapi.dbConnection.DBProduct;
 import com.example.testrestapi.dbConnection.DBProduct;
 import com.example.testrestapi.entity.Animal;
 import com.example.testrestapi.entity.Product;
-import com.example.testrestapi.service.AnimalImpl;
-import com.example.testrestapi.service.ProductImpl;
+import com.example.testrestapi.service.*;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import org.springframework.boot.SpringApplication;
@@ -24,8 +23,11 @@ public class TestRestApiApplication {
         SpringApplication.run(TestRestApiApplication.class, args);
 
         Server server = ServerBuilder
-                .forPort(8080)
-                .addService(new ProductImpl()).
+                .forPort(8080).
+                addService(new ProductImpl()).
+                addService(new AnimalPartImpl()).
+                addService(new AnimalPartTypeImpl()).
+                addService(new AnimalTypeImpl()).
                 addService(new AnimalImpl()).build();
 
         server.start();

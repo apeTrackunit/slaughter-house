@@ -218,7 +218,7 @@ public final class SlaughterHouse {
       "imalPartRequest\022\n\n\002id\030\001 \001(\003\"E\n\025GetAnimal" +
       "PartResponse\022\n\n\002id\030\001 \001(\003\022\016\n\006weight\030\002 \001(\001" +
       "\022\020\n\010animalId\030\003 \001(\003\";\n\027CreateAnimalPartRe" +
-      "quest\022\016\n\006weight\030\001 \001(\001\022\020\n\010animalId\030\002 \001(\003\"" +
+      "quest\022\016\n\006weight\030\001 \001(\003\022\020\n\010animalId\030\002 \001(\003\"" +
       "0\n\030CreateAnimalPartResponse\022\024\n\014confirmat" +
       "ion\030\001 \001(\t\"\"\n\024GetAnimalTypeRequest\022\n\n\002id\030" +
       "\001 \001(\003\"F\n\025GetAnimalTypeResponse\022\n\n\002id\030\001 \001" +
@@ -268,54 +268,54 @@ public final class SlaughterHouse {
       ".GetAnimalResponse\022k\n\014createAnimal\022,.com" +
       ".example.testrestapi.CreateAnimalRequest" +
       "\032-.com.example.testrestapi.CreateAnimalR" +
-      "esponse2\371\001\n\022AnimalPartsService\022j\n\rgetAni" +
-      "malPart\022).com.example.testrestapi.GetAni" +
-      "malRequest\032..com.example.testrestapi.Get" +
-      "AnimalPartResponse\022w\n\020createAnimalPart\0220" +
-      ".com.example.testrestapi.CreateAnimalPar" +
-      "tRequest\0321.com.example.testrestapi.Creat" +
-      "eAnimalPartResponse2\212\002\n\021AnimalTypeServic" +
-      "e\022u\n\024getAnimalTypeService\022-.com.example." +
-      "testrestapi.GetAnimalTypeRequest\032..com.e" +
-      "xample.testrestapi.GetAnimalTypeResponse" +
-      "\022~\n\027createAnimalTypeService\0220.com.exampl" +
-      "e.testrestapi.CreateAnimalTypeRequest\0321." +
-      "com.example.testrestapi.CreateAnimalType" +
-      "Response2\340\001\n\013FarmService\022c\n\016getFarmServi" +
-      "ce\022\'.com.example.testrestapi.GetFarmRequ" +
-      "est\032(.com.example.testrestapi.GetFarmRes" +
-      "ponse\022l\n\021createFarmService\022*.com.example" +
-      ".testrestapi.CreateFarmRequest\032+.com.exa" +
-      "mple.testrestapi.CreateFarmResponse2\346\002\n\017" +
-      "ProductsService\022n\n\rgetProductIds\022-.com.e" +
-      "xample.testrestapi.GetProductIdsRequest\032" +
-      "..com.example.testrestapi.GetProductIdsR" +
-      "esponse\022l\n\021getProductService\022*.com.examp" +
-      "le.testrestapi.GetProductRequest\032+.com.e" +
-      "xample.testrestapi.GetProductResponse\022u\n" +
-      "\024createProductService\022-.com.example.test" +
-      "restapi.CreateProductRequest\032..com.examp" +
-      "le.testrestapi.CreateProductResponse2\347\001\n" +
-      "\014StoreService\022f\n\017getStoreService\022(.com.e" +
-      "xample.testrestapi.GetStoreRequest\032).com" +
-      ".example.testrestapi.GetStoreResponse\022o\n" +
-      "\022createStoreService\022+.com.example.testre" +
-      "stapi.CreateStoreRequest\032,.com.example.t" +
-      "estrestapi.CreateStoreResponse2\340\001\n\013TrayS" +
-      "ervice\022c\n\016getTrayService\022\'.com.example.t" +
-      "estrestapi.GetTrayRequest\032(.com.example." +
-      "testrestapi.GetTrayResponse\022l\n\021createTra" +
-      "yService\022*.com.example.testrestapi.Creat" +
-      "eTrayRequest\032+.com.example.testrestapi.C" +
-      "reateTrayResponse2\250\002\n\025AnimalPartTypeServ" +
-      "ice\022\201\001\n\030getAnimalPartTypeService\0221.com.e" +
-      "xample.testrestapi.GetAnimalPartTypeRequ" +
-      "est\0322.com.example.testrestapi.GetAnimalP" +
-      "artTypeResponse\022\212\001\n\033createAnimalPartType" +
-      "Service\0224.com.example.testrestapi.Create" +
-      "AnimalPartTypeRequest\0325.com.example.test" +
-      "restapi.CreateAnimalPartTypeResponseB\002P\001" +
-      "b\006proto3"
+      "esponse2\375\001\n\022AnimalPartsService\022n\n\rgetAni" +
+      "malPart\022-.com.example.testrestapi.GetAni" +
+      "malPartRequest\032..com.example.testrestapi" +
+      ".GetAnimalPartResponse\022w\n\020createAnimalPa" +
+      "rt\0220.com.example.testrestapi.CreateAnima" +
+      "lPartRequest\0321.com.example.testrestapi.C" +
+      "reateAnimalPartResponse2\212\002\n\021AnimalTypeSe" +
+      "rvice\022u\n\024getAnimalTypeService\022-.com.exam" +
+      "ple.testrestapi.GetAnimalTypeRequest\032..c" +
+      "om.example.testrestapi.GetAnimalTypeResp" +
+      "onse\022~\n\027createAnimalTypeService\0220.com.ex" +
+      "ample.testrestapi.CreateAnimalTypeReques" +
+      "t\0321.com.example.testrestapi.CreateAnimal" +
+      "TypeResponse2\340\001\n\013FarmService\022c\n\016getFarmS" +
+      "ervice\022\'.com.example.testrestapi.GetFarm" +
+      "Request\032(.com.example.testrestapi.GetFar" +
+      "mResponse\022l\n\021createFarmService\022*.com.exa" +
+      "mple.testrestapi.CreateFarmRequest\032+.com" +
+      ".example.testrestapi.CreateFarmResponse2" +
+      "\346\002\n\017ProductsService\022n\n\rgetProductIds\022-.c" +
+      "om.example.testrestapi.GetProductIdsRequ" +
+      "est\032..com.example.testrestapi.GetProduct" +
+      "IdsResponse\022l\n\021getProductService\022*.com.e" +
+      "xample.testrestapi.GetProductRequest\032+.c" +
+      "om.example.testrestapi.GetProductRespons" +
+      "e\022u\n\024createProductService\022-.com.example." +
+      "testrestapi.CreateProductRequest\032..com.e" +
+      "xample.testrestapi.CreateProductResponse" +
+      "2\347\001\n\014StoreService\022f\n\017getStoreService\022(.c" +
+      "om.example.testrestapi.GetStoreRequest\032)" +
+      ".com.example.testrestapi.GetStoreRespons" +
+      "e\022o\n\022createStoreService\022+.com.example.te" +
+      "strestapi.CreateStoreRequest\032,.com.examp" +
+      "le.testrestapi.CreateStoreResponse2\340\001\n\013T" +
+      "rayService\022c\n\016getTrayService\022\'.com.examp" +
+      "le.testrestapi.GetTrayRequest\032(.com.exam" +
+      "ple.testrestapi.GetTrayResponse\022l\n\021creat" +
+      "eTrayService\022*.com.example.testrestapi.C" +
+      "reateTrayRequest\032+.com.example.testresta" +
+      "pi.CreateTrayResponse2\250\002\n\025AnimalPartType" +
+      "Service\022\201\001\n\030getAnimalPartTypeService\0221.c" +
+      "om.example.testrestapi.GetAnimalPartType" +
+      "Request\0322.com.example.testrestapi.GetAni" +
+      "malPartTypeResponse\022\212\001\n\033createAnimalPart" +
+      "TypeService\0224.com.example.testrestapi.Cr" +
+      "eateAnimalPartTypeRequest\0325.com.example." +
+      "testrestapi.CreateAnimalPartTypeResponse" +
+      "B\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
