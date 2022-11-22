@@ -34,7 +34,7 @@ public class DBTray {
     }
 
 
-    public String createTray(double maxWeight, String description, long animalPartTypeId) throws SQLException {
+    public static String createTray(double maxWeight, String description, long animalPartTypeId) throws SQLException {
         try(Connection connection=LoadDriver.getDBConnection())
         {
             Statement statement = connection.createStatement();

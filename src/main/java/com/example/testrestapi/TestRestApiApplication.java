@@ -28,7 +28,11 @@ public class TestRestApiApplication {
                 addService(new AnimalPartImpl()).
                 addService(new AnimalPartTypeImpl()).
                 addService(new AnimalTypeImpl()).
-                addService(new AnimalImpl()).build();
+                addService(new AnimalImpl()).
+                addService(new FarmImpl()).
+                addService(new StoreImpl()).
+                addService(new TrayImpl())
+                .build();
 
         server.start();
         server.awaitTermination();

@@ -22,11 +22,11 @@ public class Tray {
         this.id = id;
     }
 
-    public double getMax_weight() {
+    public double getMaxWeight() {
         return maxWeight;
     }
 
-    public void setMax_weight(double max_weight) {
+    public void setMaxWeight(double max_weight) {
         this.maxWeight = max_weight;
     }
 
