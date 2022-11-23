@@ -2,7 +2,6 @@ package com.example.testrestapi.dbConnection;
 
 import com.example.testrestapi.entity.Product;
 
-import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -38,7 +37,7 @@ public class DBProduct {
     }
 
 
-    public static String createProduct(String name,String description, long storeId) throws SQLException {
+    public static long createProduct(String name,String description, long storeId) throws SQLException {
         try(Connection connection=LoadDriver.getDBConnection())
         {
             Statement statement= connection.createStatement();
@@ -47,10 +46,13 @@ public class DBProduct {
                     name +"',"+"'"+
                     description+ "',"+"'"+
                     storeId+"');");
-
-        statement.close();
-        connection.close();
-        return "Ok";
+            ResultSet newId = statement.executeQuery(
+                    "select MAX(Id) from product;"
+            );
+            long id = newId.getLong("Id");
+            statement.close();
+            connection.close();
+            return id;
         }
     }
 

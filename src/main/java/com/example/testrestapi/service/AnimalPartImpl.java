@@ -12,6 +12,23 @@ import java.sql.SQLException;
 
 @Service
 public class AnimalPartImpl extends AnimalPartsServiceGrpc.AnimalPartsServiceImplBase {
+    @Override
+    public void updateAnimalPartProductId(UpdateAnimalPartProductIdRequest request, StreamObserver<UpdateAnimalPartProductIdResponse> responseObserver) {
+
+        try {
+
+            String confirmation = DBAnimalPart.updateProductId(request.getId(), request.getProductId());
+
+            UpdateAnimalPartProductIdResponse.Builder builder = UpdateAnimalPartProductIdResponse.newBuilder();
+            builder.setConfirmation(confirmation);
+
+            UpdateAnimalPartProductIdResponse responseText = builder.build();
+            responseObserver.onNext(responseText);
+            responseObserver.onCompleted();
+
+        } catch (SQLException e) {
+            System.out.println(e.getStackTrace());
+        }    }
 
     @Override
     public void getAnimalPart(GetAnimalPartRequest request, StreamObserver<GetAnimalPartResponse> responseObserver) {

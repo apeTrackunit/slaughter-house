@@ -11,6 +11,12 @@ class TestRestApiApplicationTests {
 
     @Test
     void contextLoads() {
+        DBAnimalPart dbAnimalPart = new DBAnimalPart();
+        try {
+            System.out.println(dbAnimalPart.updateProductId(1, 2));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
@@ -36,5 +42,6 @@ class TestRestApiApplicationTests {
             throw new RuntimeException(e);
         }
     }
+
 
 }

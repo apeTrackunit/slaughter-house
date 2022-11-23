@@ -16,184 +16,194 @@ public final class SlaughterHouse {
   }
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalIdsRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalIdsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalIdsResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalIdsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalPartRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalPartRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalPartResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalPartResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalPartRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalPartRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalPartResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalPartResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalTypeRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalTypeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalTypeResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalTypeResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalTypeRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalTypeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalTypeResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalTypeResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetFarmRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetFarmRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetFarmResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetFarmResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateFarmRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateFarmRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateFarmResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateFarmResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetProductIdsRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetProductIdsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetProductIdsResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetProductIdsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetProductRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetProductRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetProductResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetProductResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateProductRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateProductRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateProductResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateProductResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetStoreRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetStoreRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetStoreResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetStoreResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateStoreRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateStoreRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateStoreResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateStoreResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetTrayRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetTrayRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetTrayResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetTrayResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateTrayRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateTrayRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateTrayResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateTrayResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalPartTypeRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalPartTypeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_GetAnimalPartTypeResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_GetAnimalPartTypeResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalPartTypeRequest_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalPartTypeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_descriptor;
-  static final 
+  static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor;
+  static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_descriptor;
+  static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -239,83 +249,90 @@ public final class SlaughterHouse {
       "esponse\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
       "(\t\022\023\n\013animalParts\030\003 \003(\003\"9\n\024CreateProduct" +
       "Request\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
-      "(\t\"-\n\025CreateProductResponse\022\024\n\014confirmat" +
-      "ion\030\001 \001(\t\"\035\n\017GetStoreRequest\022\n\n\002id\030\001 \001(\003" +
-      "\"[\n\020GetStoreResponse\022\014\n\004name\030\001 \001(\t\022\020\n\010lo" +
-      "cation\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\022\n\npro" +
-      "ductIds\030\004 \003(\003\"]\n\022CreateStoreRequest\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023\n\013descripti" +
-      "on\030\003 \001(\t\022\022\n\nproductIds\030\004 \003(\003\"+\n\023CreateSt" +
-      "oreResponse\022\024\n\014confirmation\030\001 \001(\t\"\034\n\016Get" +
-      "TrayRequest\022\n\n\002id\030\001 \001(\003\"N\n\017GetTrayRespon" +
-      "se\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013description\030\002 \001" +
-      "(\t\022\023\n\013animalParts\030\003 \003(\003\"P\n\021CreateTrayReq" +
-      "uest\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013description\030\002" +
-      " \001(\t\022\023\n\013animalParts\030\003 \003(\003\"*\n\022CreateTrayR" +
-      "esponse\022\024\n\014confirmation\030\001 \001(\t\"&\n\030GetAnim" +
-      "alPartTypeRequest\022\n\n\002id\030\001 \001(\003\"d\n\031GetAnim" +
-      "alPartTypeResponse\022\014\n\004name\030\001 \001(\t\022\023\n\013desc" +
-      "ription\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(\003\022\023\n\013animal" +
-      "Parts\030\004 \003(\003\"f\n\033CreateAnimalPartTypeReque" +
-      "st\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\017\n" +
-      "\007trayIds\030\003 \003(\003\022\023\n\013animalParts\030\004 \003(\003\"4\n\034C" +
-      "reateAnimalPartTypeResponse\022\024\n\014confirmat" +
-      "ion\030\001 \001(\t2\316\002\n\016AnimalsService\022k\n\014getAnima" +
-      "lIds\022,.com.example.testrestapi.GetAnimal" +
-      "IdsRequest\032-.com.example.testrestapi.Get" +
-      "AnimalIdsResponse\022b\n\tgetAnimal\022).com.exa" +
-      "mple.testrestapi.GetAnimalRequest\032*.com." +
-      "example.testrestapi.GetAnimalResponse\022k\n" +
-      "\014createAnimal\022,.com.example.testrestapi." +
-      "CreateAnimalRequest\032-.com.example.testre" +
-      "stapi.CreateAnimalResponse2\375\001\n\022AnimalPar" +
-      "tsService\022n\n\rgetAnimalPart\022-.com.example" +
-      ".testrestapi.GetAnimalPartRequest\032..com." +
-      "example.testrestapi.GetAnimalPartRespons" +
-      "e\022w\n\020createAnimalPart\0220.com.example.test" +
-      "restapi.CreateAnimalPartRequest\0321.com.ex" +
-      "ample.testrestapi.CreateAnimalPartRespon" +
-      "se2\212\002\n\021AnimalTypeService\022u\n\024getAnimalTyp" +
-      "eService\022-.com.example.testrestapi.GetAn" +
-      "imalTypeRequest\032..com.example.testrestap" +
-      "i.GetAnimalTypeResponse\022~\n\027createAnimalT" +
-      "ypeService\0220.com.example.testrestapi.Cre" +
-      "ateAnimalTypeRequest\0321.com.example.testr" +
-      "estapi.CreateAnimalTypeResponse2\340\001\n\013Farm" +
-      "Service\022c\n\016getFarmService\022\'.com.example." +
-      "testrestapi.GetFarmRequest\032(.com.example" +
-      ".testrestapi.GetFarmResponse\022l\n\021createFa" +
-      "rmService\022*.com.example.testrestapi.Crea" +
-      "teFarmRequest\032+.com.example.testrestapi." +
-      "CreateFarmResponse2\346\002\n\017ProductsService\022n" +
-      "\n\rgetProductIds\022-.com.example.testrestap" +
-      "i.GetProductIdsRequest\032..com.example.tes" +
-      "trestapi.GetProductIdsResponse\022l\n\021getPro" +
-      "ductService\022*.com.example.testrestapi.Ge" +
-      "tProductRequest\032+.com.example.testrestap" +
-      "i.GetProductResponse\022u\n\024createProductSer" +
-      "vice\022-.com.example.testrestapi.CreatePro" +
-      "ductRequest\032..com.example.testrestapi.Cr" +
-      "eateProductResponse2\347\001\n\014StoreService\022f\n\017" +
-      "getStoreService\022(.com.example.testrestap" +
-      "i.GetStoreRequest\032).com.example.testrest" +
-      "api.GetStoreResponse\022o\n\022createStoreServi" +
-      "ce\022+.com.example.testrestapi.CreateStore" +
-      "Request\032,.com.example.testrestapi.Create" +
-      "StoreResponse2\340\001\n\013TrayService\022c\n\016getTray" +
-      "Service\022\'.com.example.testrestapi.GetTra" +
-      "yRequest\032(.com.example.testrestapi.GetTr" +
-      "ayResponse\022l\n\021createTrayService\022*.com.ex" +
-      "ample.testrestapi.CreateTrayRequest\032+.co" +
-      "m.example.testrestapi.CreateTrayResponse" +
-      "2\250\002\n\025AnimalPartTypeService\022\201\001\n\030getAnimal" +
-      "PartTypeService\0221.com.example.testrestap" +
-      "i.GetAnimalPartTypeRequest\0322.com.example" +
-      ".testrestapi.GetAnimalPartTypeResponse\022\212" +
-      "\001\n\033createAnimalPartTypeService\0224.com.exa" +
-      "mple.testrestapi.CreateAnimalPartTypeReq" +
-      "uest\0325.com.example.testrestapi.CreateAni" +
-      "malPartTypeResponseB\002P\001b\006proto3"
+      "(\t\022\023\n\013animalParts\030\003 \003(\003\"#\n\025CreateProduct" +
+      "Response\022\n\n\002id\030\001 \001(\001\"\035\n\017GetStoreRequest\022" +
+      "\n\n\002id\030\001 \001(\003\"[\n\020GetStoreResponse\022\014\n\004name\030" +
+      "\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023\n\013description\030\003" +
+      " \001(\t\022\022\n\nproductIds\030\004 \003(\003\"]\n\022CreateStoreR" +
+      "equest\022\014\n\004name\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023" +
+      "\n\013description\030\003 \001(\t\022\022\n\nproductIds\030\004 \003(\003\"" +
+      "+\n\023CreateStoreResponse\022\024\n\014confirmation\030\001" +
+      " \001(\t\"\034\n\016GetTrayRequest\022\n\n\002id\030\001 \001(\003\"N\n\017Ge" +
+      "tTrayResponse\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013desc" +
+      "ription\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"P\n\021Cr" +
+      "eateTrayRequest\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013de" +
+      "scription\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"*\n\022" +
+      "CreateTrayResponse\022\024\n\014confirmation\030\001 \001(\t" +
+      "\"&\n\030GetAnimalPartTypeRequest\022\n\n\002id\030\001 \001(\003" +
+      "\"d\n\031GetAnimalPartTypeResponse\022\014\n\004name\030\001 " +
+      "\001(\t\022\023\n\013description\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(" +
+      "\003\022\023\n\013animalParts\030\004 \003(\003\"f\n\033CreateAnimalPa" +
+      "rtTypeRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
+      "on\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(\003\022\023\n\013animalParts" +
+      "\030\004 \003(\003\"4\n\034CreateAnimalPartTypeResponse\022\024" +
+      "\n\014confirmation\030\001 \001(\t\"A\n UpdateAnimalPart" +
+      "ProductIdRequest\022\n\n\002id\030\001 \001(\003\022\021\n\tproductI" +
+      "d\030\002 \001(\003\"9\n!UpdateAnimalPartProductIdResp" +
+      "onse\022\024\n\014confirmation\030\001 \001(\t2\316\002\n\016AnimalsSe" +
+      "rvice\022k\n\014getAnimalIds\022,.com.example.test" +
+      "restapi.GetAnimalIdsRequest\032-.com.exampl" +
+      "e.testrestapi.GetAnimalIdsResponse\022b\n\tge" +
+      "tAnimal\022).com.example.testrestapi.GetAni" +
+      "malRequest\032*.com.example.testrestapi.Get" +
+      "AnimalResponse\022k\n\014createAnimal\022,.com.exa" +
+      "mple.testrestapi.CreateAnimalRequest\032-.c" +
+      "om.example.testrestapi.CreateAnimalRespo" +
+      "nse2\222\003\n\022AnimalPartsService\022n\n\rgetAnimalP" +
+      "art\022-.com.example.testrestapi.GetAnimalP" +
+      "artRequest\032..com.example.testrestapi.Get" +
+      "AnimalPartResponse\022w\n\020createAnimalPart\0220" +
+      ".com.example.testrestapi.CreateAnimalPar" +
+      "tRequest\0321.com.example.testrestapi.Creat" +
+      "eAnimalPartResponse\022\222\001\n\031updateAnimalPart" +
+      "ProductId\0229.com.example.testrestapi.Upda" +
+      "teAnimalPartProductIdRequest\032:.com.examp" +
+      "le.testrestapi.UpdateAnimalPartProductId" +
+      "Response2\212\002\n\021AnimalTypeService\022u\n\024getAni" +
+      "malTypeService\022-.com.example.testrestapi" +
+      ".GetAnimalTypeRequest\032..com.example.test" +
+      "restapi.GetAnimalTypeResponse\022~\n\027createA" +
+      "nimalTypeService\0220.com.example.testresta" +
+      "pi.CreateAnimalTypeRequest\0321.com.example" +
+      ".testrestapi.CreateAnimalTypeResponse2\340\001" +
+      "\n\013FarmService\022c\n\016getFarmService\022\'.com.ex" +
+      "ample.testrestapi.GetFarmRequest\032(.com.e" +
+      "xample.testrestapi.GetFarmResponse\022l\n\021cr" +
+      "eateFarmService\022*.com.example.testrestap" +
+      "i.CreateFarmRequest\032+.com.example.testre" +
+      "stapi.CreateFarmResponse2\346\002\n\017ProductsSer" +
+      "vice\022n\n\rgetProductIds\022-.com.example.test" +
+      "restapi.GetProductIdsRequest\032..com.examp" +
+      "le.testrestapi.GetProductIdsResponse\022l\n\021" +
+      "getProductService\022*.com.example.testrest" +
+      "api.GetProductRequest\032+.com.example.test" +
+      "restapi.GetProductResponse\022u\n\024createProd" +
+      "uctService\022-.com.example.testrestapi.Cre" +
+      "ateProductRequest\032..com.example.testrest" +
+      "api.CreateProductResponse2\347\001\n\014StoreServi" +
+      "ce\022f\n\017getStoreService\022(.com.example.test" +
+      "restapi.GetStoreRequest\032).com.example.te" +
+      "strestapi.GetStoreResponse\022o\n\022createStor" +
+      "eService\022+.com.example.testrestapi.Creat" +
+      "eStoreRequest\032,.com.example.testrestapi." +
+      "CreateStoreResponse2\340\001\n\013TrayService\022c\n\016g" +
+      "etTrayService\022\'.com.example.testrestapi." +
+      "GetTrayRequest\032(.com.example.testrestapi" +
+      ".GetTrayResponse\022l\n\021createTrayService\022*." +
+      "com.example.testrestapi.CreateTrayReques" +
+      "t\032+.com.example.testrestapi.CreateTrayRe" +
+      "sponse2\250\002\n\025AnimalPartTypeService\022\201\001\n\030get" +
+      "AnimalPartTypeService\0221.com.example.test" +
+      "restapi.GetAnimalPartTypeRequest\0322.com.e" +
+      "xample.testrestapi.GetAnimalPartTypeResp" +
+      "onse\022\212\001\n\033createAnimalPartTypeService\0224.c" +
+      "om.example.testrestapi.CreateAnimalPartT" +
+      "ypeRequest\0325.com.example.testrestapi.Cre" +
+      "ateAnimalPartTypeResponseB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -464,7 +481,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateProductResponse_descriptor,
-        new java.lang.String[] { "Confirmation", });
+        new java.lang.String[] { "Id", });
     internal_static_com_example_testrestapi_GetStoreRequest_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_com_example_testrestapi_GetStoreRequest_fieldAccessorTable = new
@@ -536,6 +553,18 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_descriptor,
+        new java.lang.String[] { "Confirmation", });
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor,
+        new java.lang.String[] { "Id", "ProductId", });
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_descriptor,
         new java.lang.String[] { "Confirmation", });
   }
 

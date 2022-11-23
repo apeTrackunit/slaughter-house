@@ -16,7 +16,7 @@ message GetAnimalRequest{
 
 message GetAnimalResponse{
   int64 animalId = 1;
-  double weight = 2;
+  int64 weight = 2;
   bool isOk = 3;
   int64 farmId = 4;
   int64 animalTypeId = 5;
@@ -121,7 +121,7 @@ message CreateProductRequest{
 }
 
 message CreateProductResponse{
-  string confirmation=1;
+  double id=1;
 }
 
 message GetStoreRequest{
@@ -190,6 +190,17 @@ message CreateAnimalPartTypeResponse
   string confirmation=1;
 }
 
+message UpdateAnimalPartProductIdRequest
+{
+  int64 id=1;
+  int64 productId=2;
+}
+
+message UpdateAnimalPartProductIdResponse
+{
+  string confirmation=1;
+}
+
 service AnimalsService {
   rpc getAnimalIds(GetAnimalIdsRequest) returns (GetAnimalIdsResponse);
   rpc getAnimal(GetAnimalRequest) returns (GetAnimalResponse);
@@ -199,6 +210,7 @@ service AnimalsService {
 service AnimalPartsService{
   rpc getAnimalPart(GetAnimalPartRequest) returns (GetAnimalPartResponse);
   rpc createAnimalPart(CreateAnimalPartRequest) returns (CreateAnimalPartResponse);
+  rpc updateAnimalPartProductId(UpdateAnimalPartProductIdRequest) returns (UpdateAnimalPartProductIdResponse);
 }
 
 service AnimalTypeService{

@@ -42,12 +42,12 @@ public class ProductImpl extends ProductsServiceGrpc.ProductsServiceImplBase {
     @Override
     public void createProductService(CreateProductRequest request, StreamObserver<CreateProductResponse> responseObserver) {
         try {
-            String response=DBProduct.createProduct(
+            long response=DBProduct.createProduct(
                     request.getName(), request.getDescription(), 1
             );
 
             CreateProductResponse.Builder builder=CreateProductResponse.newBuilder();
-            builder.setConfirmation(response);
+            builder.setId(response);
 
             CreateProductResponse responseText=builder.build();
             responseObserver.onNext(responseText);
