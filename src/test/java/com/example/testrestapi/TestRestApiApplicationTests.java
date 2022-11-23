@@ -32,7 +32,7 @@ class TestRestApiApplicationTests {
             System.out.println(dbAnimal.createAnimal(40, true, 1, 1));
             System.out.println("Animal Part");
             System.out.println(dbAnimalPart.getAnimalPart(1));
-            System.out.println(dbAnimalPart.createAnimalPart(30, 1, 1, 1));
+            System.out.println(dbAnimalPart.createAnimalPart(30, 1, 1, 1, 1));
             System.out.println("Animal Part Type");
             System.out.println(dbAnimalPartType.getAnimalPartType(1));
             System.out.println(dbAnimalPartType.createAnimalPartType("Stehienko", "Jaaaaaj tak by som si dal"));

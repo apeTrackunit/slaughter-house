@@ -30,6 +30,12 @@ public class AnimalPartClient implements IAnimalPartClient{
 
     @Override
     public String updateProductId(Long id, Long productId) {
-        return null;
+        UpdateAnimalPartProductIdRequest input  = UpdateAnimalPartProductIdRequest.newBuilder()
+                .setProductId(productId)
+                .setId(id)
+                .build();
+        UpdateAnimalPartProductIdResponse response = blockingStub.updateAnimalPartProductId(input);
+
+        return response.getConfirmation();
     }
 }

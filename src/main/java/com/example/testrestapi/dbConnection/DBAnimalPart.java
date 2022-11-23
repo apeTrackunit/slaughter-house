@@ -34,17 +34,18 @@ public class DBAnimalPart {
             return animalPart;
         }
     }
-    public static String createAnimalPart(long weight, long animalId, long productId, long trayId) throws SQLException {
+    public static String createAnimalPart(long weight, long animalId, long productId, long trayId, long animalPartTypeId) throws SQLException {
         try (Connection connection = LoadDriver.getDBConnection()) {
 
             Statement statement = connection.createStatement();
             statement.executeUpdate(
                     "insert into animal_part " +
-                            "(Weight, AnimalId, ProductId, TrayId)\n" +
+                            "(Weight, AnimalId, ProductId, AnimalTypeId, TrayId)\n" +
                             "values (" +
                             weight + ", " +
                             animalId + ", " +
                             productId + ", " +
+                            animalPartTypeId + ", " +
                             trayId + ");");
 
             statement.close();

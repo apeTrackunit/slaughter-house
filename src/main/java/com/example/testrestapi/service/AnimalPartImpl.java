@@ -53,7 +53,7 @@ public class AnimalPartImpl extends AnimalPartsServiceGrpc.AnimalPartsServiceImp
     @Override
     public void createAnimalPart(CreateAnimalPartRequest request, StreamObserver<CreateAnimalPartResponse> responseObserver) {
         try {
-            String response = DBAnimalPart.createAnimalPart(request.getWeight(), request.getAnimalId(), 1, 1);
+            String response = DBAnimalPart.createAnimalPart(request.getWeight(), request.getAnimalId(), 1, request.getTrayId(), request.getAnimalPartType());
 
             CreateAnimalPartResponse.Builder builder = CreateAnimalPartResponse.newBuilder();
             builder.setConfirmation(response);
