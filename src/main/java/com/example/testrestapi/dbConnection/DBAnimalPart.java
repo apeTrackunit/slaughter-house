@@ -46,6 +46,22 @@ public class DBAnimalPart {
                             animalId + ", " +
                             productId + ", " +
                             trayId + ");");
+
+            statement.close();
+            connection.close();
+            return "Ok";
+        }
+    }
+
+    public static String updateProductId(long id, long productId) throws SQLException {
+        try (Connection connection = LoadDriver.getDBConnection()) {
+
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(
+                    "update animal_part" +
+                            " set ProductId = " + productId +
+                            " where Id = " + id + ";"
+            );
             statement.close();
             connection.close();
             return "Ok";

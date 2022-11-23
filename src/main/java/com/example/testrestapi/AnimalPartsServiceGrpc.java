@@ -76,6 +76,37 @@ public final class AnimalPartsServiceGrpc {
     return getCreateAnimalPartMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.example.testrestapi.UpdateAnimalPartProductIdRequest,
+      com.example.testrestapi.UpdateAnimalPartProductIdResponse> getUpdateAnimalPartProductIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updateAnimalPartProductId",
+      requestType = com.example.testrestapi.UpdateAnimalPartProductIdRequest.class,
+      responseType = com.example.testrestapi.UpdateAnimalPartProductIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.testrestapi.UpdateAnimalPartProductIdRequest,
+      com.example.testrestapi.UpdateAnimalPartProductIdResponse> getUpdateAnimalPartProductIdMethod() {
+    io.grpc.MethodDescriptor<com.example.testrestapi.UpdateAnimalPartProductIdRequest, com.example.testrestapi.UpdateAnimalPartProductIdResponse> getUpdateAnimalPartProductIdMethod;
+    if ((getUpdateAnimalPartProductIdMethod = AnimalPartsServiceGrpc.getUpdateAnimalPartProductIdMethod) == null) {
+      synchronized (AnimalPartsServiceGrpc.class) {
+        if ((getUpdateAnimalPartProductIdMethod = AnimalPartsServiceGrpc.getUpdateAnimalPartProductIdMethod) == null) {
+          AnimalPartsServiceGrpc.getUpdateAnimalPartProductIdMethod = getUpdateAnimalPartProductIdMethod =
+              io.grpc.MethodDescriptor.<com.example.testrestapi.UpdateAnimalPartProductIdRequest, com.example.testrestapi.UpdateAnimalPartProductIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateAnimalPartProductId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.UpdateAnimalPartProductIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.testrestapi.UpdateAnimalPartProductIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AnimalPartsServiceMethodDescriptorSupplier("updateAnimalPartProductId"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAnimalPartProductIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,13 @@ public final class AnimalPartsServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAnimalPartMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void updateAnimalPartProductId(com.example.testrestapi.UpdateAnimalPartProductIdRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.UpdateAnimalPartProductIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAnimalPartProductIdMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -154,6 +192,13 @@ public final class AnimalPartsServiceGrpc {
                 com.example.testrestapi.CreateAnimalPartRequest,
                 com.example.testrestapi.CreateAnimalPartResponse>(
                   this, METHODID_CREATE_ANIMAL_PART)))
+          .addMethod(
+            getUpdateAnimalPartProductIdMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.example.testrestapi.UpdateAnimalPartProductIdRequest,
+                com.example.testrestapi.UpdateAnimalPartProductIdResponse>(
+                  this, METHODID_UPDATE_ANIMAL_PART_PRODUCT_ID)))
           .build();
     }
   }
@@ -187,6 +232,14 @@ public final class AnimalPartsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAnimalPartMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateAnimalPartProductId(com.example.testrestapi.UpdateAnimalPartProductIdRequest request,
+        io.grpc.stub.StreamObserver<com.example.testrestapi.UpdateAnimalPartProductIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAnimalPartProductIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -215,6 +268,13 @@ public final class AnimalPartsServiceGrpc {
     public com.example.testrestapi.CreateAnimalPartResponse createAnimalPart(com.example.testrestapi.CreateAnimalPartRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAnimalPartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.testrestapi.UpdateAnimalPartProductIdResponse updateAnimalPartProductId(com.example.testrestapi.UpdateAnimalPartProductIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAnimalPartProductIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -247,10 +307,19 @@ public final class AnimalPartsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAnimalPartMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.testrestapi.UpdateAnimalPartProductIdResponse> updateAnimalPartProductId(
+        com.example.testrestapi.UpdateAnimalPartProductIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAnimalPartProductIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ANIMAL_PART = 0;
   private static final int METHODID_CREATE_ANIMAL_PART = 1;
+  private static final int METHODID_UPDATE_ANIMAL_PART_PRODUCT_ID = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -276,6 +345,10 @@ public final class AnimalPartsServiceGrpc {
         case METHODID_CREATE_ANIMAL_PART:
           serviceImpl.createAnimalPart((com.example.testrestapi.CreateAnimalPartRequest) request,
               (io.grpc.stub.StreamObserver<com.example.testrestapi.CreateAnimalPartResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ANIMAL_PART_PRODUCT_ID:
+          serviceImpl.updateAnimalPartProductId((com.example.testrestapi.UpdateAnimalPartProductIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.testrestapi.UpdateAnimalPartProductIdResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -340,6 +413,7 @@ public final class AnimalPartsServiceGrpc {
               .setSchemaDescriptor(new AnimalPartsServiceFileDescriptorSupplier())
               .addMethod(getGetAnimalPartMethod())
               .addMethod(getCreateAnimalPartMethod())
+              .addMethod(getUpdateAnimalPartProductIdMethod())
               .build();
         }
       }

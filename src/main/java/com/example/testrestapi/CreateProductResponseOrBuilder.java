@@ -8,14 +8,8 @@ public interface CreateProductResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string confirmation = 1;</code>
-   * @return The confirmation.
+   * <code>double id = 1;</code>
+   * @return The id.
    */
-  java.lang.String getConfirmation();
-  /**
-   * <code>string confirmation = 1;</code>
-   * @return The bytes for confirmation.
-   */
-  com.google.protobuf.ByteString
-      getConfirmationBytes();
+  double getId();
 }

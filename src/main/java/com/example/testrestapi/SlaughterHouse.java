@@ -194,6 +194,16 @@ public final class SlaughterHouse {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -238,84 +248,90 @@ public final class SlaughterHouse {
       "esponse\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
       "(\t\022\023\n\013animalParts\030\003 \003(\003\"N\n\024CreateProduct" +
       "Request\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
-      "(\t\022\023\n\013animalParts\030\003 \003(\003\"-\n\025CreateProduct" +
-      "Response\022\024\n\014confirmation\030\001 \001(\t\"\035\n\017GetSto" +
-      "reRequest\022\n\n\002id\030\001 \001(\003\"[\n\020GetStoreRespons" +
-      "e\022\014\n\004name\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023\n\013des" +
-      "cription\030\003 \001(\t\022\022\n\nproductIds\030\004 \003(\003\"]\n\022Cr" +
-      "eateStoreRequest\022\014\n\004name\030\001 \001(\t\022\020\n\010locati" +
-      "on\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\022\n\nproduct" +
-      "Ids\030\004 \003(\003\"+\n\023CreateStoreResponse\022\024\n\014conf" +
-      "irmation\030\001 \001(\t\"\034\n\016GetTrayRequest\022\n\n\002id\030\001" +
-      " \001(\003\"N\n\017GetTrayResponse\022\021\n\tmaxWeight\030\001 \001" +
-      "(\001\022\023\n\013description\030\002 \001(\t\022\023\n\013animalParts\030\003" +
-      " \003(\003\"P\n\021CreateTrayRequest\022\021\n\tmaxWeight\030\001" +
-      " \001(\001\022\023\n\013description\030\002 \001(\t\022\023\n\013animalParts" +
-      "\030\003 \003(\003\"*\n\022CreateTrayResponse\022\024\n\014confirma" +
-      "tion\030\001 \001(\t\"&\n\030GetAnimalPartTypeRequest\022\n" +
-      "\n\002id\030\001 \001(\003\"d\n\031GetAnimalPartTypeResponse\022" +
-      "\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\017\n\007tr" +
-      "ayIds\030\003 \003(\003\022\023\n\013animalParts\030\004 \003(\003\"f\n\033Crea" +
-      "teAnimalPartTypeRequest\022\014\n\004name\030\001 \001(\t\022\023\n" +
-      "\013description\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(\003\022\023\n\013a" +
-      "nimalParts\030\004 \003(\003\"4\n\034CreateAnimalPartType" +
-      "Response\022\024\n\014confirmation\030\001 \001(\t2\316\002\n\016Anima" +
-      "lsService\022k\n\014getAnimalIds\022,.com.example." +
-      "testrestapi.GetAnimalIdsRequest\032-.com.ex" +
-      "ample.testrestapi.GetAnimalIdsResponse\022b" +
-      "\n\tgetAnimal\022).com.example.testrestapi.Ge" +
-      "tAnimalRequest\032*.com.example.testrestapi" +
-      ".GetAnimalResponse\022k\n\014createAnimal\022,.com" +
-      ".example.testrestapi.CreateAnimalRequest" +
-      "\032-.com.example.testrestapi.CreateAnimalR" +
-      "esponse2\375\001\n\022AnimalPartsService\022n\n\rgetAni" +
-      "malPart\022-.com.example.testrestapi.GetAni" +
-      "malPartRequest\032..com.example.testrestapi" +
-      ".GetAnimalPartResponse\022w\n\020createAnimalPa" +
-      "rt\0220.com.example.testrestapi.CreateAnima" +
-      "lPartRequest\0321.com.example.testrestapi.C" +
-      "reateAnimalPartResponse2\212\002\n\021AnimalTypeSe" +
-      "rvice\022u\n\024getAnimalTypeService\022-.com.exam" +
-      "ple.testrestapi.GetAnimalTypeRequest\032..c" +
-      "om.example.testrestapi.GetAnimalTypeResp" +
-      "onse\022~\n\027createAnimalTypeService\0220.com.ex" +
-      "ample.testrestapi.CreateAnimalTypeReques" +
-      "t\0321.com.example.testrestapi.CreateAnimal" +
-      "TypeResponse2\340\001\n\013FarmService\022c\n\016getFarmS" +
-      "ervice\022\'.com.example.testrestapi.GetFarm" +
-      "Request\032(.com.example.testrestapi.GetFar" +
-      "mResponse\022l\n\021createFarmService\022*.com.exa" +
-      "mple.testrestapi.CreateFarmRequest\032+.com" +
-      ".example.testrestapi.CreateFarmResponse2" +
-      "\346\002\n\017ProductsService\022n\n\rgetProductIds\022-.c" +
-      "om.example.testrestapi.GetProductIdsRequ" +
-      "est\032..com.example.testrestapi.GetProduct" +
-      "IdsResponse\022l\n\021getProductService\022*.com.e" +
-      "xample.testrestapi.GetProductRequest\032+.c" +
-      "om.example.testrestapi.GetProductRespons" +
-      "e\022u\n\024createProductService\022-.com.example." +
-      "testrestapi.CreateProductRequest\032..com.e" +
-      "xample.testrestapi.CreateProductResponse" +
-      "2\347\001\n\014StoreService\022f\n\017getStoreService\022(.c" +
-      "om.example.testrestapi.GetStoreRequest\032)" +
-      ".com.example.testrestapi.GetStoreRespons" +
-      "e\022o\n\022createStoreService\022+.com.example.te" +
-      "strestapi.CreateStoreRequest\032,.com.examp" +
-      "le.testrestapi.CreateStoreResponse2\340\001\n\013T" +
-      "rayService\022c\n\016getTrayService\022\'.com.examp" +
-      "le.testrestapi.GetTrayRequest\032(.com.exam" +
-      "ple.testrestapi.GetTrayResponse\022l\n\021creat" +
-      "eTrayService\022*.com.example.testrestapi.C" +
-      "reateTrayRequest\032+.com.example.testresta" +
-      "pi.CreateTrayResponse2\250\002\n\025AnimalPartType" +
-      "Service\022\201\001\n\030getAnimalPartTypeService\0221.c" +
-      "om.example.testrestapi.GetAnimalPartType" +
-      "Request\0322.com.example.testrestapi.GetAni" +
-      "malPartTypeResponse\022\212\001\n\033createAnimalPart" +
-      "TypeService\0224.com.example.testrestapi.Cr" +
-      "eateAnimalPartTypeRequest\0325.com.example." +
-      "testrestapi.CreateAnimalPartTypeResponse" +
-      "B\002P\001b\006proto3"
+      "(\t\022\023\n\013animalParts\030\003 \003(\003\"#\n\025CreateProduct" +
+      "Response\022\n\n\002id\030\001 \001(\001\"\035\n\017GetStoreRequest\022" +
+      "\n\n\002id\030\001 \001(\003\"[\n\020GetStoreResponse\022\014\n\004name\030" +
+      "\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023\n\013description\030\003" +
+      " \001(\t\022\022\n\nproductIds\030\004 \003(\003\"]\n\022CreateStoreR" +
+      "equest\022\014\n\004name\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\023" +
+      "\n\013description\030\003 \001(\t\022\022\n\nproductIds\030\004 \003(\003\"" +
+      "+\n\023CreateStoreResponse\022\024\n\014confirmation\030\001" +
+      " \001(\t\"\034\n\016GetTrayRequest\022\n\n\002id\030\001 \001(\003\"N\n\017Ge" +
+      "tTrayResponse\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013desc" +
+      "ription\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"P\n\021Cr" +
+      "eateTrayRequest\022\021\n\tmaxWeight\030\001 \001(\001\022\023\n\013de" +
+      "scription\030\002 \001(\t\022\023\n\013animalParts\030\003 \003(\003\"*\n\022" +
+      "CreateTrayResponse\022\024\n\014confirmation\030\001 \001(\t" +
+      "\"&\n\030GetAnimalPartTypeRequest\022\n\n\002id\030\001 \001(\003" +
+      "\"d\n\031GetAnimalPartTypeResponse\022\014\n\004name\030\001 " +
+      "\001(\t\022\023\n\013description\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(" +
+      "\003\022\023\n\013animalParts\030\004 \003(\003\"f\n\033CreateAnimalPa" +
+      "rtTypeRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
+      "on\030\002 \001(\t\022\017\n\007trayIds\030\003 \003(\003\022\023\n\013animalParts" +
+      "\030\004 \003(\003\"4\n\034CreateAnimalPartTypeResponse\022\024" +
+      "\n\014confirmation\030\001 \001(\t\"A\n UpdateAnimalPart" +
+      "ProductIdRequest\022\n\n\002id\030\001 \001(\003\022\021\n\tproductI" +
+      "d\030\002 \001(\003\"9\n!UpdateAnimalPartProductIdResp" +
+      "onse\022\024\n\014confirmation\030\001 \001(\t2\316\002\n\016AnimalsSe" +
+      "rvice\022k\n\014getAnimalIds\022,.com.example.test" +
+      "restapi.GetAnimalIdsRequest\032-.com.exampl" +
+      "e.testrestapi.GetAnimalIdsResponse\022b\n\tge" +
+      "tAnimal\022).com.example.testrestapi.GetAni" +
+      "malRequest\032*.com.example.testrestapi.Get" +
+      "AnimalResponse\022k\n\014createAnimal\022,.com.exa" +
+      "mple.testrestapi.CreateAnimalRequest\032-.c" +
+      "om.example.testrestapi.CreateAnimalRespo" +
+      "nse2\222\003\n\022AnimalPartsService\022n\n\rgetAnimalP" +
+      "art\022-.com.example.testrestapi.GetAnimalP" +
+      "artRequest\032..com.example.testrestapi.Get" +
+      "AnimalPartResponse\022w\n\020createAnimalPart\0220" +
+      ".com.example.testrestapi.CreateAnimalPar" +
+      "tRequest\0321.com.example.testrestapi.Creat" +
+      "eAnimalPartResponse\022\222\001\n\031updateAnimalPart" +
+      "ProductId\0229.com.example.testrestapi.Upda" +
+      "teAnimalPartProductIdRequest\032:.com.examp" +
+      "le.testrestapi.UpdateAnimalPartProductId" +
+      "Response2\212\002\n\021AnimalTypeService\022u\n\024getAni" +
+      "malTypeService\022-.com.example.testrestapi" +
+      ".GetAnimalTypeRequest\032..com.example.test" +
+      "restapi.GetAnimalTypeResponse\022~\n\027createA" +
+      "nimalTypeService\0220.com.example.testresta" +
+      "pi.CreateAnimalTypeRequest\0321.com.example" +
+      ".testrestapi.CreateAnimalTypeResponse2\340\001" +
+      "\n\013FarmService\022c\n\016getFarmService\022\'.com.ex" +
+      "ample.testrestapi.GetFarmRequest\032(.com.e" +
+      "xample.testrestapi.GetFarmResponse\022l\n\021cr" +
+      "eateFarmService\022*.com.example.testrestap" +
+      "i.CreateFarmRequest\032+.com.example.testre" +
+      "stapi.CreateFarmResponse2\346\002\n\017ProductsSer" +
+      "vice\022n\n\rgetProductIds\022-.com.example.test" +
+      "restapi.GetProductIdsRequest\032..com.examp" +
+      "le.testrestapi.GetProductIdsResponse\022l\n\021" +
+      "getProductService\022*.com.example.testrest" +
+      "api.GetProductRequest\032+.com.example.test" +
+      "restapi.GetProductResponse\022u\n\024createProd" +
+      "uctService\022-.com.example.testrestapi.Cre" +
+      "ateProductRequest\032..com.example.testrest" +
+      "api.CreateProductResponse2\347\001\n\014StoreServi" +
+      "ce\022f\n\017getStoreService\022(.com.example.test" +
+      "restapi.GetStoreRequest\032).com.example.te" +
+      "strestapi.GetStoreResponse\022o\n\022createStor" +
+      "eService\022+.com.example.testrestapi.Creat" +
+      "eStoreRequest\032,.com.example.testrestapi." +
+      "CreateStoreResponse2\340\001\n\013TrayService\022c\n\016g" +
+      "etTrayService\022\'.com.example.testrestapi." +
+      "GetTrayRequest\032(.com.example.testrestapi" +
+      ".GetTrayResponse\022l\n\021createTrayService\022*." +
+      "com.example.testrestapi.CreateTrayReques" +
+      "t\032+.com.example.testrestapi.CreateTrayRe" +
+      "sponse2\250\002\n\025AnimalPartTypeService\022\201\001\n\030get" +
+      "AnimalPartTypeService\0221.com.example.test" +
+      "restapi.GetAnimalPartTypeRequest\0322.com.e" +
+      "xample.testrestapi.GetAnimalPartTypeResp" +
+      "onse\022\212\001\n\033createAnimalPartTypeService\0224.c" +
+      "om.example.testrestapi.CreateAnimalPartT" +
+      "ypeRequest\0325.com.example.testrestapi.Cre" +
+      "ateAnimalPartTypeResponseB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -464,7 +480,7 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateProductResponse_descriptor,
-        new java.lang.String[] { "Confirmation", });
+        new java.lang.String[] { "Id", });
     internal_static_com_example_testrestapi_GetStoreRequest_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_com_example_testrestapi_GetStoreRequest_fieldAccessorTable = new
@@ -536,6 +552,18 @@ public final class SlaughterHouse {
     internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_testrestapi_CreateAnimalPartTypeResponse_descriptor,
+        new java.lang.String[] { "Confirmation", });
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor,
+        new java.lang.String[] { "Id", "ProductId", });
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_example_testrestapi_UpdateAnimalPartProductIdResponse_descriptor,
         new java.lang.String[] { "Confirmation", });
   }
 

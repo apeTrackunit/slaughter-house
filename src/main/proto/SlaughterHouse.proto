@@ -120,7 +120,7 @@ message CreateProductRequest{
 }
 
 message CreateProductResponse{
-  string confirmation=1;
+  double id=1;
 }
 
 message GetStoreRequest{
@@ -189,7 +189,16 @@ message CreateAnimalPartTypeResponse
   string confirmation=1;
 }
 
+message UpdateAnimalPartProductIdRequest
+{
+  int64 id=1;
+  int64 productId=2;
+}
 
+message UpdateAnimalPartProductIdResponse
+{
+  string confirmation=1;
+}
 
 service AnimalsService {
   rpc getAnimalIds(GetAnimalIdsRequest) returns (GetAnimalIdsResponse);
@@ -200,6 +209,7 @@ service AnimalsService {
 service AnimalPartsService{
   rpc getAnimalPart(GetAnimalPartRequest) returns (GetAnimalPartResponse);
   rpc createAnimalPart(CreateAnimalPartRequest) returns (CreateAnimalPartResponse);
+  rpc updateAnimalPartProductId(UpdateAnimalPartProductIdRequest) returns (UpdateAnimalPartProductIdResponse);
 }
 
 service AnimalTypeService{

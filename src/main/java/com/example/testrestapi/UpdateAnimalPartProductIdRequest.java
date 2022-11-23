@@ -4,25 +4,25 @@
 package com.example.testrestapi;
 
 /**
- * Protobuf type {@code com.example.testrestapi.CreateProductResponse}
+ * Protobuf type {@code com.example.testrestapi.UpdateAnimalPartProductIdRequest}
  */
-public final class CreateProductResponse extends
+public final class UpdateAnimalPartProductIdRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.example.testrestapi.CreateProductResponse)
-    CreateProductResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.example.testrestapi.UpdateAnimalPartProductIdRequest)
+    UpdateAnimalPartProductIdRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CreateProductResponse.newBuilder() to construct.
-  private CreateProductResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateAnimalPartProductIdRequest.newBuilder() to construct.
+  private UpdateAnimalPartProductIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CreateProductResponse() {
+  private UpdateAnimalPartProductIdRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CreateProductResponse();
+    return new UpdateAnimalPartProductIdRequest();
   }
 
   @java.lang.Override
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private CreateProductResponse(
+  private UpdateAnimalPartProductIdRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -48,9 +48,14 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 9: {
+          case 8: {
 
-            id_ = input.readDouble();
+            id_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            productId_ = input.readInt64();
             break;
           }
           default: {
@@ -76,26 +81,37 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_CreateProductResponse_descriptor;
+    return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_CreateProductResponse_fieldAccessorTable
+    return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.example.testrestapi.CreateProductResponse.class, com.example.testrestapi.CreateProductResponse.Builder.class);
+            com.example.testrestapi.UpdateAnimalPartProductIdRequest.class, com.example.testrestapi.UpdateAnimalPartProductIdRequest.Builder.class);
   }
 
   public static final int ID_FIELD_NUMBER = 1;
-  private double id_;
+  private long id_;
   /**
-   * <code>double id = 1;</code>
+   * <code>int64 id = 1;</code>
    * @return The id.
    */
   @java.lang.Override
-  public double getId() {
+  public long getId() {
     return id_;
+  }
+
+  public static final int PRODUCTID_FIELD_NUMBER = 2;
+  private long productId_;
+  /**
+   * <code>int64 productId = 2;</code>
+   * @return The productId.
+   */
+  @java.lang.Override
+  public long getProductId() {
+    return productId_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -112,8 +128,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Double.doubleToRawLongBits(id_) != 0) {
-      output.writeDouble(1, id_);
+    if (id_ != 0L) {
+      output.writeInt64(1, id_);
+    }
+    if (productId_ != 0L) {
+      output.writeInt64(2, productId_);
     }
     unknownFields.writeTo(output);
   }
@@ -124,9 +143,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Double.doubleToRawLongBits(id_) != 0) {
+    if (id_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, id_);
+        .computeInt64Size(1, id_);
+    }
+    if (productId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, productId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -138,14 +161,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.example.testrestapi.CreateProductResponse)) {
+    if (!(obj instanceof com.example.testrestapi.UpdateAnimalPartProductIdRequest)) {
       return super.equals(obj);
     }
-    com.example.testrestapi.CreateProductResponse other = (com.example.testrestapi.CreateProductResponse) obj;
+    com.example.testrestapi.UpdateAnimalPartProductIdRequest other = (com.example.testrestapi.UpdateAnimalPartProductIdRequest) obj;
 
-    if (java.lang.Double.doubleToLongBits(getId())
-        != java.lang.Double.doubleToLongBits(
-            other.getId())) return false;
+    if (getId()
+        != other.getId()) return false;
+    if (getProductId()
+        != other.getProductId()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -159,75 +183,78 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getId()));
+        getId());
+    hash = (37 * hash) + PRODUCTID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProductId());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(byte[] data)
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(java.io.InputStream input)
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.example.testrestapi.CreateProductResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.example.testrestapi.CreateProductResponse parseDelimitedFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.example.testrestapi.CreateProductResponse parseFrom(
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -240,7 +267,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.example.testrestapi.CreateProductResponse prototype) {
+  public static Builder newBuilder(com.example.testrestapi.UpdateAnimalPartProductIdRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -256,26 +283,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.example.testrestapi.CreateProductResponse}
+   * Protobuf type {@code com.example.testrestapi.UpdateAnimalPartProductIdRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.example.testrestapi.CreateProductResponse)
-      com.example.testrestapi.CreateProductResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.example.testrestapi.UpdateAnimalPartProductIdRequest)
+      com.example.testrestapi.UpdateAnimalPartProductIdRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_CreateProductResponse_descriptor;
+      return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_CreateProductResponse_fieldAccessorTable
+      return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.testrestapi.CreateProductResponse.class, com.example.testrestapi.CreateProductResponse.Builder.class);
+              com.example.testrestapi.UpdateAnimalPartProductIdRequest.class, com.example.testrestapi.UpdateAnimalPartProductIdRequest.Builder.class);
     }
 
-    // Construct using com.example.testrestapi.CreateProductResponse.newBuilder()
+    // Construct using com.example.testrestapi.UpdateAnimalPartProductIdRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -293,7 +320,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      id_ = 0D;
+      id_ = 0L;
+
+      productId_ = 0L;
 
       return this;
     }
@@ -301,17 +330,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_CreateProductResponse_descriptor;
+      return com.example.testrestapi.SlaughterHouse.internal_static_com_example_testrestapi_UpdateAnimalPartProductIdRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.example.testrestapi.CreateProductResponse getDefaultInstanceForType() {
-      return com.example.testrestapi.CreateProductResponse.getDefaultInstance();
+    public com.example.testrestapi.UpdateAnimalPartProductIdRequest getDefaultInstanceForType() {
+      return com.example.testrestapi.UpdateAnimalPartProductIdRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.example.testrestapi.CreateProductResponse build() {
-      com.example.testrestapi.CreateProductResponse result = buildPartial();
+    public com.example.testrestapi.UpdateAnimalPartProductIdRequest build() {
+      com.example.testrestapi.UpdateAnimalPartProductIdRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -319,9 +348,10 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.example.testrestapi.CreateProductResponse buildPartial() {
-      com.example.testrestapi.CreateProductResponse result = new com.example.testrestapi.CreateProductResponse(this);
+    public com.example.testrestapi.UpdateAnimalPartProductIdRequest buildPartial() {
+      com.example.testrestapi.UpdateAnimalPartProductIdRequest result = new com.example.testrestapi.UpdateAnimalPartProductIdRequest(this);
       result.id_ = id_;
+      result.productId_ = productId_;
       onBuilt();
       return result;
     }
@@ -360,18 +390,21 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.example.testrestapi.CreateProductResponse) {
-        return mergeFrom((com.example.testrestapi.CreateProductResponse)other);
+      if (other instanceof com.example.testrestapi.UpdateAnimalPartProductIdRequest) {
+        return mergeFrom((com.example.testrestapi.UpdateAnimalPartProductIdRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.example.testrestapi.CreateProductResponse other) {
-      if (other == com.example.testrestapi.CreateProductResponse.getDefaultInstance()) return this;
-      if (other.getId() != 0D) {
+    public Builder mergeFrom(com.example.testrestapi.UpdateAnimalPartProductIdRequest other) {
+      if (other == com.example.testrestapi.UpdateAnimalPartProductIdRequest.getDefaultInstance()) return this;
+      if (other.getId() != 0L) {
         setId(other.getId());
+      }
+      if (other.getProductId() != 0L) {
+        setProductId(other.getProductId());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -388,11 +421,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.example.testrestapi.CreateProductResponse parsedMessage = null;
+      com.example.testrestapi.UpdateAnimalPartProductIdRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.example.testrestapi.CreateProductResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.example.testrestapi.UpdateAnimalPartProductIdRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -402,33 +435,64 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private double id_ ;
+    private long id_ ;
     /**
-     * <code>double id = 1;</code>
+     * <code>int64 id = 1;</code>
      * @return The id.
      */
     @java.lang.Override
-    public double getId() {
+    public long getId() {
       return id_;
     }
     /**
-     * <code>double id = 1;</code>
+     * <code>int64 id = 1;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
-    public Builder setId(double value) {
+    public Builder setId(long value) {
       
       id_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>double id = 1;</code>
+     * <code>int64 id = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
       
-      id_ = 0D;
+      id_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long productId_ ;
+    /**
+     * <code>int64 productId = 2;</code>
+     * @return The productId.
+     */
+    @java.lang.Override
+    public long getProductId() {
+      return productId_;
+    }
+    /**
+     * <code>int64 productId = 2;</code>
+     * @param value The productId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductId(long value) {
+      
+      productId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 productId = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductId() {
+      
+      productId_ = 0L;
       onChanged();
       return this;
     }
@@ -445,41 +509,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.example.testrestapi.CreateProductResponse)
+    // @@protoc_insertion_point(builder_scope:com.example.testrestapi.UpdateAnimalPartProductIdRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.example.testrestapi.CreateProductResponse)
-  private static final com.example.testrestapi.CreateProductResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.example.testrestapi.UpdateAnimalPartProductIdRequest)
+  private static final com.example.testrestapi.UpdateAnimalPartProductIdRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.example.testrestapi.CreateProductResponse();
+    DEFAULT_INSTANCE = new com.example.testrestapi.UpdateAnimalPartProductIdRequest();
   }
 
-  public static com.example.testrestapi.CreateProductResponse getDefaultInstance() {
+  public static com.example.testrestapi.UpdateAnimalPartProductIdRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CreateProductResponse>
-      PARSER = new com.google.protobuf.AbstractParser<CreateProductResponse>() {
+  private static final com.google.protobuf.Parser<UpdateAnimalPartProductIdRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateAnimalPartProductIdRequest>() {
     @java.lang.Override
-    public CreateProductResponse parsePartialFrom(
+    public UpdateAnimalPartProductIdRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreateProductResponse(input, extensionRegistry);
+      return new UpdateAnimalPartProductIdRequest(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<CreateProductResponse> parser() {
+  public static com.google.protobuf.Parser<UpdateAnimalPartProductIdRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CreateProductResponse> getParserForType() {
+  public com.google.protobuf.Parser<UpdateAnimalPartProductIdRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.example.testrestapi.CreateProductResponse getDefaultInstanceForType() {
+  public com.example.testrestapi.UpdateAnimalPartProductIdRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
