@@ -46,14 +46,30 @@ public class DBProduct {
                     name +"',"+"'"+
                     description+ "',"+"'"+
                     storeId+"');");
-            ResultSet newId = statement.executeQuery(
-                    "select MAX(Id) from product;"
+
+            statement.close();
+            connection.close();
+        }
+        try(Connection connection=LoadDriver.getDBConnection()){
+            Statement statement= connection.createStatement();
+            ResultSet resultSet;
+            resultSet = statement.executeQuery(
+                    "select * from product where Id = (\n" +
+                            "select MAX(Id) from product);"
             );
-            long id = newId.getLong("Id");
+
+            long id = 0;
+            while(resultSet.next())
+            {
+                id = resultSet.getLong("Id");
+            }
+
+            resultSet.close();
             statement.close();
             connection.close();
             return id;
         }
+
     }
 
 
