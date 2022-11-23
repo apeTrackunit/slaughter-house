@@ -6,24 +6,6 @@ public class AnimalPartType {
     private long id;
     private String name;
     private String description;
-    private ArrayList<Tray> tray;
-    private ArrayList<AnimalPart> animalParts;
-
-    public ArrayList<Tray> getTray() {
-        return tray;
-    }
-
-    public void setTray(ArrayList<Tray> tray) {
-        this.tray = tray;
-    }
-
-    public ArrayList<AnimalPart> getAnimalParts() {
-        return animalParts;
-    }
-
-    public void setAnimalParts(ArrayList<AnimalPart> animalParts) {
-        this.animalParts = animalParts;
-    }
 
     public AnimalPartType(long id, String name, String description) {
         this.id = id;

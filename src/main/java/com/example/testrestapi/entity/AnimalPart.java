@@ -8,29 +8,15 @@ public class AnimalPart {
     private Animal animal;
     private Product product;
     private Tray tray;
+    private AnimalPartType type;
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public Tray getTray() {
-        return tray;
-    }
-
-    public void setTray(Tray tray) {
-        this.tray = tray;
-    }
-
-    public AnimalPart(long id, double weight, Animal animal, Product product, Tray tray) {
+    public AnimalPart(long id, double weight, Animal animal, Product product, Tray tray, AnimalPartType type) {
         this.id = id;
         this.weight = weight;
         this.animal = animal;
         this.product = product;
         this.tray = tray;
+        this.type = type;
     }
 
     public long getId() {
@@ -57,15 +43,27 @@ public class AnimalPart {
         this.animal = animal;
     }
 
-    /*
-    public static AnimalPart getAnimalPartObj(JSONObject jsonObject){
-        JSONObject jsonAnimal = (JSONObject)jsonObject.get("animal");
-
-        return new AnimalPart(
-                Long.valueOf(jsonObject.get("id").toString()),
-                Double.valueOf(jsonObject.get("weight").toString()),
-                Animal.getAnimalObj(jsonAnimal));
-
+    public Product getProduct() {
+        return product;
     }
-     */
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public Tray getTray() {
+        return tray;
+    }
+
+    public void setTray(Tray tray) {
+        this.tray = tray;
+    }
+
+    public AnimalPartType getType() {
+        return type;
+    }
+
+    public void setType(AnimalPartType type) {
+        this.type = type;
+    }
 }

@@ -26,7 +26,7 @@ public class DBAnimalPart {
                 long AnimalId = resultSet.getLong("AnimalId");
                 long ProductId = resultSet.getLong("ProductId");
                 long TrayId = resultSet.getLong("TrayId");
-                animalPart = new AnimalPart(Id, Weight, null, null, null);
+                animalPart = new AnimalPart(Id, Weight, null, null, null, null);
             }
             resultSet.close();
             statement.close();
