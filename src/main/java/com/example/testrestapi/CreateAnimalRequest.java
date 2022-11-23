@@ -49,9 +49,9 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
+          case 9: {
 
-            weight_ = input.readInt64();
+            weight_ = input.readDouble();
             break;
           }
           case 16: {
@@ -110,13 +110,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEIGHT_FIELD_NUMBER = 1;
-  private long weight_;
+  private double weight_;
   /**
-   * <code>int64 weight = 1;</code>
+   * <code>double weight = 1;</code>
    * @return The weight.
    */
   @java.lang.Override
-  public long getWeight() {
+  public double getWeight() {
     return weight_;
   }
 
@@ -205,8 +205,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (weight_ != 0L) {
-      output.writeInt64(1, weight_);
+    if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
+      output.writeDouble(1, weight_);
     }
     if (isOk_ != false) {
       output.writeBool(2, isOk_);
@@ -229,9 +229,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (weight_ != 0L) {
+    if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, weight_);
+        .computeDoubleSize(1, weight_);
     }
     if (isOk_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -263,8 +263,9 @@ private static final long serialVersionUID = 0L;
     }
     com.example.testrestapi.CreateAnimalRequest other = (com.example.testrestapi.CreateAnimalRequest) obj;
 
-    if (getWeight()
-        != other.getWeight()) return false;
+    if (java.lang.Double.doubleToLongBits(getWeight())
+        != java.lang.Double.doubleToLongBits(
+            other.getWeight())) return false;
     if (getIsOk()
         != other.getIsOk()) return false;
     if (getFarmId()
@@ -286,7 +287,7 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getWeight());
+        java.lang.Double.doubleToLongBits(getWeight()));
     hash = (37 * hash) + ISOK_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsOk());
@@ -431,7 +432,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      weight_ = 0L;
+      weight_ = 0D;
 
       isOk_ = false;
 
@@ -520,7 +521,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.example.testrestapi.CreateAnimalRequest other) {
       if (other == com.example.testrestapi.CreateAnimalRequest.getDefaultInstance()) return this;
-      if (other.getWeight() != 0L) {
+      if (other.getWeight() != 0D) {
         setWeight(other.getWeight());
       }
       if (other.getIsOk() != false) {
@@ -565,33 +566,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long weight_ ;
+    private double weight_ ;
     /**
-     * <code>int64 weight = 1;</code>
+     * <code>double weight = 1;</code>
      * @return The weight.
      */
     @java.lang.Override
-    public long getWeight() {
+    public double getWeight() {
       return weight_;
     }
     /**
-     * <code>int64 weight = 1;</code>
+     * <code>double weight = 1;</code>
      * @param value The weight to set.
      * @return This builder for chaining.
      */
-    public Builder setWeight(long value) {
+    public Builder setWeight(double value) {
       
       weight_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 weight = 1;</code>
+     * <code>double weight = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearWeight() {
       
-      weight_ = 0L;
+      weight_ = 0D;
       onChanged();
       return this;
     }

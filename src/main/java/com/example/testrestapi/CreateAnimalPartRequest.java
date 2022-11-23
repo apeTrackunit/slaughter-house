@@ -58,6 +58,16 @@ private static final long serialVersionUID = 0L;
             animalId_ = input.readInt64();
             break;
           }
+          case 24: {
+
+            trayId_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            animalPartType_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -114,6 +124,28 @@ private static final long serialVersionUID = 0L;
     return animalId_;
   }
 
+  public static final int TRAYID_FIELD_NUMBER = 3;
+  private long trayId_;
+  /**
+   * <code>int64 trayId = 3;</code>
+   * @return The trayId.
+   */
+  @java.lang.Override
+  public long getTrayId() {
+    return trayId_;
+  }
+
+  public static final int ANIMALPARTTYPE_FIELD_NUMBER = 4;
+  private long animalPartType_;
+  /**
+   * <code>int64 animalPartType = 4;</code>
+   * @return The animalPartType.
+   */
+  @java.lang.Override
+  public long getAnimalPartType() {
+    return animalPartType_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -134,6 +166,12 @@ private static final long serialVersionUID = 0L;
     if (animalId_ != 0L) {
       output.writeInt64(2, animalId_);
     }
+    if (trayId_ != 0L) {
+      output.writeInt64(3, trayId_);
+    }
+    if (animalPartType_ != 0L) {
+      output.writeInt64(4, animalPartType_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -150,6 +188,14 @@ private static final long serialVersionUID = 0L;
     if (animalId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, animalId_);
+    }
+    if (trayId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, trayId_);
+    }
+    if (animalPartType_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, animalPartType_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -170,6 +216,10 @@ private static final long serialVersionUID = 0L;
         != other.getWeight()) return false;
     if (getAnimalId()
         != other.getAnimalId()) return false;
+    if (getTrayId()
+        != other.getTrayId()) return false;
+    if (getAnimalPartType()
+        != other.getAnimalPartType()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -187,6 +237,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ANIMALID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAnimalId());
+    hash = (37 * hash) + TRAYID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTrayId());
+    hash = (37 * hash) + ANIMALPARTTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAnimalPartType());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -324,6 +380,10 @@ private static final long serialVersionUID = 0L;
 
       animalId_ = 0L;
 
+      trayId_ = 0L;
+
+      animalPartType_ = 0L;
+
       return this;
     }
 
@@ -352,6 +412,8 @@ private static final long serialVersionUID = 0L;
       com.example.testrestapi.CreateAnimalPartRequest result = new com.example.testrestapi.CreateAnimalPartRequest(this);
       result.weight_ = weight_;
       result.animalId_ = animalId_;
+      result.trayId_ = trayId_;
+      result.animalPartType_ = animalPartType_;
       onBuilt();
       return result;
     }
@@ -405,6 +467,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getAnimalId() != 0L) {
         setAnimalId(other.getAnimalId());
+      }
+      if (other.getTrayId() != 0L) {
+        setTrayId(other.getTrayId());
+      }
+      if (other.getAnimalPartType() != 0L) {
+        setAnimalPartType(other.getAnimalPartType());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -493,6 +561,68 @@ private static final long serialVersionUID = 0L;
     public Builder clearAnimalId() {
       
       animalId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long trayId_ ;
+    /**
+     * <code>int64 trayId = 3;</code>
+     * @return The trayId.
+     */
+    @java.lang.Override
+    public long getTrayId() {
+      return trayId_;
+    }
+    /**
+     * <code>int64 trayId = 3;</code>
+     * @param value The trayId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTrayId(long value) {
+      
+      trayId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 trayId = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTrayId() {
+      
+      trayId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long animalPartType_ ;
+    /**
+     * <code>int64 animalPartType = 4;</code>
+     * @return The animalPartType.
+     */
+    @java.lang.Override
+    public long getAnimalPartType() {
+      return animalPartType_;
+    }
+    /**
+     * <code>int64 animalPartType = 4;</code>
+     * @param value The animalPartType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAnimalPartType(long value) {
+      
+      animalPartType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 animalPartType = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAnimalPartType() {
+      
+      animalPartType_ = 0L;
       onChanged();
       return this;
     }

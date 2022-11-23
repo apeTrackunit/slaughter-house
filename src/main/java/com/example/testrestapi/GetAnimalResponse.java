@@ -54,9 +54,9 @@ private static final long serialVersionUID = 0L;
             animalId_ = input.readInt64();
             break;
           }
-          case 16: {
+          case 17: {
 
-            weight_ = input.readInt64();
+            weight_ = input.readDouble();
             break;
           }
           case 24: {
@@ -126,13 +126,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEIGHT_FIELD_NUMBER = 2;
-  private long weight_;
+  private double weight_;
   /**
-   * <code>int64 weight = 2;</code>
+   * <code>double weight = 2;</code>
    * @return The weight.
    */
   @java.lang.Override
-  public long getWeight() {
+  public double getWeight() {
     return weight_;
   }
 
@@ -224,8 +224,8 @@ private static final long serialVersionUID = 0L;
     if (animalId_ != 0L) {
       output.writeInt64(1, animalId_);
     }
-    if (weight_ != 0L) {
-      output.writeInt64(2, weight_);
+    if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
+      output.writeDouble(2, weight_);
     }
     if (isOk_ != false) {
       output.writeBool(3, isOk_);
@@ -252,9 +252,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, animalId_);
     }
-    if (weight_ != 0L) {
+    if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, weight_);
+        .computeDoubleSize(2, weight_);
     }
     if (isOk_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -288,8 +288,9 @@ private static final long serialVersionUID = 0L;
 
     if (getAnimalId()
         != other.getAnimalId()) return false;
-    if (getWeight()
-        != other.getWeight()) return false;
+    if (java.lang.Double.doubleToLongBits(getWeight())
+        != java.lang.Double.doubleToLongBits(
+            other.getWeight())) return false;
     if (getIsOk()
         != other.getIsOk()) return false;
     if (getFarmId()
@@ -314,7 +315,7 @@ private static final long serialVersionUID = 0L;
         getAnimalId());
     hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getWeight());
+        java.lang.Double.doubleToLongBits(getWeight()));
     hash = (37 * hash) + ISOK_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsOk());
@@ -461,7 +462,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       animalId_ = 0L;
 
-      weight_ = 0L;
+      weight_ = 0D;
 
       isOk_ = false;
 
@@ -554,7 +555,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAnimalId() != 0L) {
         setAnimalId(other.getAnimalId());
       }
-      if (other.getWeight() != 0L) {
+      if (other.getWeight() != 0D) {
         setWeight(other.getWeight());
       }
       if (other.getIsOk() != false) {
@@ -630,33 +631,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long weight_ ;
+    private double weight_ ;
     /**
-     * <code>int64 weight = 2;</code>
+     * <code>double weight = 2;</code>
      * @return The weight.
      */
     @java.lang.Override
-    public long getWeight() {
+    public double getWeight() {
       return weight_;
     }
     /**
-     * <code>int64 weight = 2;</code>
+     * <code>double weight = 2;</code>
      * @param value The weight to set.
      * @return This builder for chaining.
      */
-    public Builder setWeight(long value) {
+    public Builder setWeight(double value) {
       
       weight_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 weight = 2;</code>
+     * <code>double weight = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearWeight() {
       
-      weight_ = 0L;
+      weight_ = 0D;
       onChanged();
       return this;
     }
