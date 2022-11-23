@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IProductClient {
     List<Long> getProducts(long animalId);
-    String createProduct(String name, String description);
+    Long createProduct(String name, String description);
 }

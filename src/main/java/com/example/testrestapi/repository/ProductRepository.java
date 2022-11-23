@@ -23,17 +23,15 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public String createProduct(ProductInput productInput) {
-        //TODO: fix
-        String id = productClient.createProduct(productInput.getProductName(), productInput.getProductDescription());
-
+        Long id = productClient.createProduct(productInput.getProductName(), productInput.getProductDescription());
 
         for (var animalPartId : productInput.getAnimalPartIds()) {
-            String confirmation = animalPartRepository.updateAnimalPartProductId(animalPartId, 1L);
+            String confirmation = animalPartRepository.updateAnimalPartProductId(animalPartId, id);
 
             if(!confirmation.equals("Ok")){
                 System.out.println("Couldn't add animal part to product");
             }
         }
-        return id;
+        return "Ok";
     }
 }

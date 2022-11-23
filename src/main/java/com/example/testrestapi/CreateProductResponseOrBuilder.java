@@ -8,8 +8,8 @@ public interface CreateProductResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>double id = 1;</code>
+   * <code>int64 id = 1;</code>
    * @return The id.
    */
-  double getId();
+  long getId();
 }

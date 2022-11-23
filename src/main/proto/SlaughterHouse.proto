@@ -121,7 +121,7 @@ message CreateProductRequest{
 }
 
 message CreateProductResponse{
-  double id=1;
+  int64 id=1;
 }
 
 message GetStoreRequest{

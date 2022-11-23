@@ -26,9 +26,9 @@ public class ProductClient implements IProductClient{
     }
 
     @Override
-    public String createProduct(String name, String description) {
+    public Long createProduct(String name, String description) {
         CreateProductRequest input = CreateProductRequest.newBuilder().setName(name).setDescription(description).build();
         CreateProductResponse response = blockingStub.createProductService(input);
-        return response.getConfirmation();
+        return response.getId();
     }
 }

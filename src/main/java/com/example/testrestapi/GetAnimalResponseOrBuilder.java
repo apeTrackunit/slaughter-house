@@ -14,10 +14,10 @@ public interface GetAnimalResponseOrBuilder extends
   long getAnimalId();
 
   /**
-   * <code>double weight = 2;</code>
+   * <code>int64 weight = 2;</code>
    * @return The weight.
    */
-  double getWeight();
+  long getWeight();
 
   /**
    * <code>bool isOk = 3;</code>
