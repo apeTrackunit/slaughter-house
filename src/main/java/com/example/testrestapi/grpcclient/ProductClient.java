@@ -1,9 +1,6 @@
 package com.example.testrestapi.grpcclient;
 
-import com.example.testrestapi.AnimalsServiceGrpc;
-import com.example.testrestapi.GetProductIdsRequest;
-import com.example.testrestapi.GetProductIdsResponse;
-import com.example.testrestapi.ProductsServiceGrpc;
+import com.example.testrestapi.*;
 import com.example.testrestapi.entity.Product;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -26,5 +23,12 @@ public class ProductClient implements IProductClient{
         GetProductIdsResponse response = blockingStub.getProductIds(input);
 
         return response.getProductIdsList();
+    }
+
+    @Override
+    public String createProduct(String name, String description) {
+        CreateProductRequest input = CreateProductRequest.newBuilder().setName(name).setDescription(description).build();
+        CreateProductResponse response = blockingStub.createProductService(input);
+        return response.getConfirmation();
     }
 }

@@ -58,7 +58,7 @@ public class DBAnimal {
         }
     }
 
-    public static String createAnimal(long weight, boolean isOk, long farmId, long animalTypeId) throws SQLException {
+    public static String createAnimal(double weight, boolean isOk, long farmId, long animalTypeId) throws SQLException {
         try (Connection connection = LoadDriver.getDBConnection()) {
 
             Statement statement = connection.createStatement();

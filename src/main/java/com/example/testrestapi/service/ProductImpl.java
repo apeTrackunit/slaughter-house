@@ -39,11 +39,6 @@ public class ProductImpl extends ProductsServiceGrpc.ProductsServiceImplBase {
 
     }
 
-    /**
-     * Unnecessary
-     * @param request
-     * @param responseObserver
-     */
     @Override
     public void createProductService(CreateProductRequest request, StreamObserver<CreateProductResponse> responseObserver) {
         try {

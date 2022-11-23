@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private CreateProductRequest() {
     name_ = "";
     description_ = "";
-    animalParts_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -41,7 +40,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -64,27 +62,6 @@ private static final long serialVersionUID = 0L;
             description_ = s;
             break;
           }
-          case 24: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              animalParts_ = newLongList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            animalParts_.addLong(input.readInt64());
-            break;
-          }
-          case 26: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-              animalParts_ = newLongList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              animalParts_.addLong(input.readInt64());
-            }
-            input.popLimit(limit);
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -102,9 +79,6 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        animalParts_.makeImmutable(); // C
-      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -198,34 +172,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ANIMALPARTS_FIELD_NUMBER = 3;
-  private com.google.protobuf.Internal.LongList animalParts_;
-  /**
-   * <code>repeated int64 animalParts = 3;</code>
-   * @return A list containing the animalParts.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Long>
-      getAnimalPartsList() {
-    return animalParts_;
-  }
-  /**
-   * <code>repeated int64 animalParts = 3;</code>
-   * @return The count of animalParts.
-   */
-  public int getAnimalPartsCount() {
-    return animalParts_.size();
-  }
-  /**
-   * <code>repeated int64 animalParts = 3;</code>
-   * @param index The index of the element to return.
-   * @return The animalParts at the given index.
-   */
-  public long getAnimalParts(int index) {
-    return animalParts_.getLong(index);
-  }
-  private int animalPartsMemoizedSerializedSize = -1;
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -240,19 +186,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
-    }
-    if (getAnimalPartsList().size() > 0) {
-      output.writeUInt32NoTag(26);
-      output.writeUInt32NoTag(animalPartsMemoizedSerializedSize);
-    }
-    for (int i = 0; i < animalParts_.size(); i++) {
-      output.writeInt64NoTag(animalParts_.getLong(i));
     }
     unknownFields.writeTo(output);
   }
@@ -268,20 +206,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < animalParts_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt64SizeNoTag(animalParts_.getLong(i));
-      }
-      size += dataSize;
-      if (!getAnimalPartsList().isEmpty()) {
-        size += 1;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      animalPartsMemoizedSerializedSize = dataSize;
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -302,8 +226,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
-    if (!getAnimalPartsList()
-        .equals(other.getAnimalPartsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -319,10 +241,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
-    if (getAnimalPartsCount() > 0) {
-      hash = (37 * hash) + ANIMALPARTS_FIELD_NUMBER;
-      hash = (53 * hash) + getAnimalPartsList().hashCode();
-    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -460,8 +378,6 @@ private static final long serialVersionUID = 0L;
 
       description_ = "";
 
-      animalParts_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -488,14 +404,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.example.testrestapi.CreateProductRequest buildPartial() {
       com.example.testrestapi.CreateProductRequest result = new com.example.testrestapi.CreateProductRequest(this);
-      int from_bitField0_ = bitField0_;
       result.name_ = name_;
       result.description_ = description_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        animalParts_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.animalParts_ = animalParts_;
       onBuilt();
       return result;
     }
@@ -552,16 +462,6 @@ private static final long serialVersionUID = 0L;
         description_ = other.description_;
         onChanged();
       }
-      if (!other.animalParts_.isEmpty()) {
-        if (animalParts_.isEmpty()) {
-          animalParts_ = other.animalParts_;
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          ensureAnimalPartsIsMutable();
-          animalParts_.addAll(other.animalParts_);
-        }
-        onChanged();
-      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -590,7 +490,6 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -740,85 +639,6 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       description_ = value;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Internal.LongList animalParts_ = emptyLongList();
-    private void ensureAnimalPartsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        animalParts_ = mutableCopy(animalParts_);
-        bitField0_ |= 0x00000001;
-       }
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @return A list containing the animalParts.
-     */
-    public java.util.List<java.lang.Long>
-        getAnimalPartsList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(animalParts_) : animalParts_;
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @return The count of animalParts.
-     */
-    public int getAnimalPartsCount() {
-      return animalParts_.size();
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @param index The index of the element to return.
-     * @return The animalParts at the given index.
-     */
-    public long getAnimalParts(int index) {
-      return animalParts_.getLong(index);
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @param index The index to set the value at.
-     * @param value The animalParts to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAnimalParts(
-        int index, long value) {
-      ensureAnimalPartsIsMutable();
-      animalParts_.setLong(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @param value The animalParts to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAnimalParts(long value) {
-      ensureAnimalPartsIsMutable();
-      animalParts_.addLong(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @param values The animalParts to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllAnimalParts(
-        java.lang.Iterable<? extends java.lang.Long> values) {
-      ensureAnimalPartsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, animalParts_);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated int64 animalParts = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAnimalParts() {
-      animalParts_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }

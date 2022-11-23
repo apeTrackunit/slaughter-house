@@ -2,6 +2,7 @@ package com.example.testrestapi.controller;
 
 import com.example.testrestapi.entity.Animal;
 import com.example.testrestapi.entity.Product;
+import com.example.testrestapi.entity.ProductInput;
 import com.example.testrestapi.inf.IProductRepository;
 import com.example.testrestapi.repository.ProductRepository;
 import org.springframework.web.bind.annotation.*;
@@ -28,4 +29,11 @@ public class ProductController {
 
         return repo.getProducts(animalId.get().longValue());
     }
+
+    @RequestMapping(value = "/product", method = RequestMethod.POST)
+    @ResponseBody
+    public String createAnimal(@RequestBody ProductInput productInput) {
+        return repo.createProduct(productInput);
+    }
+
 }

@@ -6,9 +6,9 @@ public class AnimalPart {
     private long id;
     private double weight;
     private Animal animal;
-    private Product product;
     private Tray tray;
     private AnimalPartType type;
+    private Product product;
 
     public AnimalPart(long id, double weight, Animal animal, Product product, Tray tray, AnimalPartType type) {
         this.id = id;

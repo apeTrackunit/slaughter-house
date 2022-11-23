@@ -18,4 +18,16 @@ public interface CreateAnimalPartRequestOrBuilder extends
    * @return The animalId.
    */
   long getAnimalId();
+
+  /**
+   * <code>int64 trayId = 3;</code>
+   * @return The trayId.
+   */
+  long getTrayId();
+
+  /**
+   * <code>int64 animalPartType = 4;</code>
+   * @return The animalPartType.
+   */
+  long getAnimalPartType();
 }

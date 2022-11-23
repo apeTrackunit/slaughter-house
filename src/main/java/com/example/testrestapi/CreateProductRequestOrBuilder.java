@@ -30,21 +30,4 @@ public interface CreateProductRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
-
-  /**
-   * <code>repeated int64 animalParts = 3;</code>
-   * @return A list containing the animalParts.
-   */
-  java.util.List<java.lang.Long> getAnimalPartsList();
-  /**
-   * <code>repeated int64 animalParts = 3;</code>
-   * @return The count of animalParts.
-   */
-  int getAnimalPartsCount();
-  /**
-   * <code>repeated int64 animalParts = 3;</code>
-   * @param index The index of the element to return.
-   * @return The animalParts at the given index.
-   */
-  long getAnimalParts(int index);
 }

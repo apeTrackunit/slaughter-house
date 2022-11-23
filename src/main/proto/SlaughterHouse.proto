@@ -24,7 +24,7 @@ message GetAnimalResponse{
 }
 
 message CreateAnimalRequest{
-  int64 weight = 1;
+  double weight = 1;
   bool isOk = 2;
   int64 farmId = 3;
   int64 animalTypeId = 4;
@@ -48,6 +48,8 @@ message GetAnimalPartResponse{
 message CreateAnimalPartRequest{
   int64 weight = 1;
   int64 animalId = 2;
+  int64 trayId = 3;
+  int64 animalPartType = 4;
 }
 
 message CreateAnimalPartResponse{
@@ -116,7 +118,6 @@ message GetProductResponse{
 message CreateProductRequest{
   string name=1;
   string description=2;
-  repeated int64 animalParts=3;
 }
 
 message CreateProductResponse{
