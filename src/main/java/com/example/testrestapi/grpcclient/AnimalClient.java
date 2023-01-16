@@ -2,6 +2,7 @@ package com.example.testrestapi.grpcclient;
 
 import com.example.testrestapi.*;
 import com.example.testrestapi.entity.Animal;
+import com.example.testrestapi.entity.Farm;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -37,5 +38,17 @@ public class AnimalClient implements IAnimalClient{
 
 
         return response.getAnimalIdsList();
+    }
+
+    @Override
+    public Animal getAnimal(long id) {
+        GetAnimalRequest input = GetAnimalRequest.newBuilder().setAnimalId(id).build();
+
+        GetAnimalResponse response = blockingStub.getAnimal(input);
+
+        Animal animal = new Animal(response.getAnimalId(), response.getWeight(), response.getIsOk(),
+                null, null, response.getRegistrationDate());
+
+        return animal;
     }
 }

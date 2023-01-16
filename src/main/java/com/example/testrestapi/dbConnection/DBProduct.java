@@ -85,7 +85,7 @@ public class DBProduct {
                     "select * from product\n" +
                             "where Id in (\n" +
                             "    select distinct ProductId\n" +
-                            "    from animalpart\n" +
+                            "    from animal_part\n" +
                             "    where AnimalId = " +
                             id + ");");
 

@@ -62,11 +62,12 @@ public class DBAnimal {
         try (Connection connection = LoadDriver.getDBConnection()) {
 
             Statement statement = connection.createStatement();
+            long longWeight = Math.round(weight);
             statement.executeUpdate(
                     "insert into animal " +
                             "(Weight, IsOk, FarmId, AnimalTypeId)\n" +
                             "values (" +
-                            weight + ", " +
+                            longWeight + ", " +
                             isOk + ", " +
                             farmId + ", " +
                             animalTypeId + ");");
@@ -86,7 +87,7 @@ public class DBAnimal {
                     "select * from animal\n" +
                             "where Id in (\n" +
                             "    select distinct AnimalId\n" +
-                            "    from animalpart\n" +
+                            "    from animal_part\n" +
                             "    where ProductId = " +
                             id + ");");
 

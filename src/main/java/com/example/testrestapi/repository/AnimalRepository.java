@@ -24,7 +24,7 @@ public class AnimalRepository implements IAnimalRepository {
 
     @Override
     public Animal getAnimalById(long id) {
-        return null;
+        return animalClient.getAnimal(id);
     }
 
     @Override
