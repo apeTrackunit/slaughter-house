@@ -13,7 +13,8 @@ public class AnimalPartClient implements IAnimalPartClient{
             .usePlaintext()
             .build();
 
-    private AnimalPartsServiceGrpc.AnimalPartsServiceBlockingStub blockingStub = AnimalPartsServiceGrpc.newBlockingStub(managedChannel);
+    private AnimalPartsServiceGrpc.AnimalPartsServiceBlockingStub blockingStub =
+            AnimalPartsServiceGrpc.newBlockingStub(managedChannel);
 
     @Override
     public String createAnimalPart(AnimalPartInput animalPartInput) {
