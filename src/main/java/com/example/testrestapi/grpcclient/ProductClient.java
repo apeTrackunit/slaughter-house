@@ -1,6 +1,6 @@
 package com.example.testrestapi.grpcclient;
 
-import com.example.testrestapi.*;
+import com.example.testrestapi.proto.*;
 import com.example.testrestapi.entity.Product;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

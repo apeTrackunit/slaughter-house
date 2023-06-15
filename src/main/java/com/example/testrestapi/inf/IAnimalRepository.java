@@ -1,6 +1,5 @@
 package com.example.testrestapi.inf;
 
-import com.example.testrestapi.CreateAnimalRequest;
 import com.example.testrestapi.entity.Animal;
 
 import java.util.List;

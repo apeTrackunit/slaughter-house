@@ -1,6 +1,6 @@
 package com.example.testrestapi.service;
 
-import com.example.testrestapi.*;
+import com.example.testrestapi.proto.*;
 import com.example.testrestapi.dbConnection.DBProduct;
 import com.example.testrestapi.entity.Product;
 import io.grpc.stub.StreamObserver;

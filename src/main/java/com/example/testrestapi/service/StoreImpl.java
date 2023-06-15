@@ -1,6 +1,6 @@
 package com.example.testrestapi.service;
 
-import com.example.testrestapi.*;
+import com.example.testrestapi.proto.*;
 import com.example.testrestapi.dbConnection.DBFarm;
 import com.example.testrestapi.dbConnection.DBStore;
 import com.example.testrestapi.entity.Farm;

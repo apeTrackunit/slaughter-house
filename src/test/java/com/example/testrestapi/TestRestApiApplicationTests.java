@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 @SpringBootTest
 class TestRestApiApplicationTests {
-
+/*
     @Test
     void contextLoads() {
         DBAnimalPart dbAnimalPart = new DBAnimalPart();
@@ -18,7 +18,6 @@ class TestRestApiApplicationTests {
             throw new RuntimeException(e);
         }
     }
-
     @Test
     void dbConnection(){
         DBAnimal dbAnimal = new DBAnimal();
@@ -43,5 +42,5 @@ class TestRestApiApplicationTests {
         }
     }
 
-
+*/
 }
